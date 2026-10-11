@@ -1,0 +1,11 @@
+# media and build products stay out of git
+*.mov
+*.mp4
+*.wav
+*.m4a
+*.ogg
+build/
+edit/build/
+edit/node_modules/
+__pycache__/
+*.pyc

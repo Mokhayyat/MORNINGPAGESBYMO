@@ -1,0 +1,91 @@
+@font-face { font-family: "Kalam"; src: url(fonts/Kalam-Bold.ttf); font-weight: 700; }
+@font-face { font-family: "Kalam"; src: url(fonts/Kalam-Regular.ttf); font-weight: 400; }
+@font-face { font-family: "Caveat"; src: url("fonts/Caveat[wght].ttf"); font-weight: 400 700; }
+@font-face { font-family: "Caveat Brush"; src: url(fonts/CaveatBrush-Regular.ttf); }
+@font-face { font-family: "Patrick Hand"; src: url(fonts/PatrickHand-Regular.ttf); }
+@font-face { font-family: "Special Elite"; src: url(fonts/SpecialElite-Regular.ttf); }
+@font-face { font-family: "Permanent Marker"; src: url(fonts/PermanentMarker-Regular.ttf); }
+@font-face { font-family: "Gochi Hand"; src: url(fonts/GochiHand-Regular.ttf); }
+
+:root {
+  --paper: #F4ECDC; --paper2: #EADFC8; --kraft: #C9A27E; --ink: #3A2A22; --ink-soft: #5B4636;
+  --sage: #9AA57F; --terracotta: #C8643C; --mustard: #E9B44C; --blue: #5D7A99;
+  --claude: #D97757; --redpen: #C0392B; --sticky: #F7D96B;
+  --shadow: drop-shadow(3px 6px 0 rgba(58, 42, 34, .16)) drop-shadow(0 10px 18px rgba(58, 42, 34, .22));
+}
+
+html, body {
+  margin: 0; width: 1080px; height: 1920px; overflow: hidden;
+  background: transparent;
+  -webkit-font-smoothing: antialiased;
+}
+body.preview { background: #6d7f63; }
+#stage { position: absolute; inset: 0; }
+#defs { position: absolute; width: 0; height: 0; }
+
+.thing { position: absolute; transform-origin: 50% 50%; }
+.thing > svg { position: absolute; left: 0; top: 0; overflow: visible; }
+.shadow { filter: var(--shadow); }
+
+/* hand-drawn line boil: body class cycles b0/b1/b2 at 12 fps */
+body.b0 .boil > svg { filter: url(#boil0); }
+body.b1 .boil > svg { filter: url(#boil1); }
+body.b2 .boil > svg { filter: url(#boil2); }
+
+.paper {
+  background-color: var(--paper);
+  background-image: url(img/paper.png);
+  background-blend-mode: multiply;
+}
+.kraft {
+  background-color: var(--kraft);
+  background-image: url(img/paper.png);
+  background-blend-mode: multiply;
+}
+.torn {
+  clip-path: polygon(0% 8%, 3% 0%, 9% 6%, 15% 1%, 22% 7%, 30% 2%, 37% 6%, 45% 0%, 52% 5%, 60% 1%, 67% 7%, 75% 2%,
+    82% 6%, 90% 0%, 96% 5%, 100% 2%, 99% 50%, 100% 96%, 95% 100%, 88% 94%, 81% 99%, 73% 93%, 66% 98%, 58% 94%,
+    50% 100%, 43% 94%, 35% 99%, 27% 94%, 20% 100%, 12% 95%, 5% 100%, 0% 94%, 1% 50%);
+}
+.tape {
+  position: absolute; width: 130px; height: 38px;
+  background: rgba(233, 180, 76, .62);
+  clip-path: polygon(2% 0, 98% 6%, 100% 30%, 97% 55%, 100% 78%, 97% 100%, 3% 94%, 0 70%, 3% 45%, 0 20%);
+}
+.tape.sage { background: rgba(154, 165, 127, .66); }
+.tape.blue { background: rgba(93, 122, 153, .5); }
+
+.label { position: absolute; left: 0; right: 0; text-align: center; color: var(--ink); white-space: nowrap; }
+
+/* captions */
+.capwrap { position: absolute; left: 540px; top: 1400px; z-index: 30; filter: var(--shadow); }
+.cap {
+  transform: translate(-50%, -50%);
+  max-width: 900px; width: max-content;
+  padding: 12px 34px 18px;
+  font: 700 58px/1.12 "Kalam", sans-serif; color: var(--ink);
+  text-align: center;
+}
+.cap .w { display: inline; }
+.hl { padding: 0 4px; margin: 0 -4px; border-radius: 6px;
+  background-repeat: no-repeat; background-size: 100% 46%; background-position: 0 82%; }
+.hl.mustard { background-image: linear-gradient(100deg, rgba(233,180,76,.0) 0%, rgba(233,180,76,.8) 4%, rgba(233,180,76,.75) 96%, rgba(233,180,76,0) 100%); }
+.hl.sage { background-image: linear-gradient(100deg, rgba(154,165,127,0) 0%, rgba(154,165,127,.8) 4%, rgba(154,165,127,.75) 96%, rgba(154,165,127,0) 100%); }
+.hl.terracotta { background-image: linear-gradient(100deg, rgba(200,100,60,0) 0%, rgba(200,100,60,.55) 4%, rgba(200,100,60,.5) 96%, rgba(200,100,60,0) 100%); }
+.hl.blue { background-image: linear-gradient(100deg, rgba(93,122,153,0) 0%, rgba(93,122,153,.5) 4%, rgba(93,122,153,.45) 96%, rgba(93,122,153,0) 100%); }
+.hl.claude { background-image: linear-gradient(100deg, rgba(217,119,87,0) 0%, rgba(217,119,87,.62) 4%, rgba(217,119,87,.58) 96%, rgba(217,119,87,0) 100%); }
+.hl.redpen { color: var(--redpen); background: none; }
+
+/* speech bubbles */
+.bubble {
+  position: absolute; z-index: 22;
+  font: 400 68px/1.04 "Gochi Hand", sans-serif; color: var(--ink);
+}
+.bubble .txt { position: absolute; left: 34px; right: 28px; top: 26px; }
+.bubble .ch { opacity: 0; }
+
+/* full-frame layers */
+.full { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+.dust { background-size: 1080px 1920px; opacity: 0; }
+body.d0 .dust.a { opacity: .9; }
+body.d1 .dust.b { opacity: .9; }

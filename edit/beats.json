@@ -1,0 +1,197 @@
+{
+  "meta": {
+    "title": "Morning Pages by Mo - intro",
+    "source": "MORNING PAGES INTRO VID.mov (720x1280, 64.95 s, Snapchat export)",
+    "fps": 30,
+    "duration": 64.95,
+    "size": [1080, 1920],
+    "notes": "All times in seconds on the uncut source timeline (no cuts). Positions are px on the 1080x1920 output. Visual pops lead their word by ~1 frame."
+  },
+
+  "zones": {
+    "ui_top": 250, "ui_bottom": 1500, "ui_right_x": 960, "ui_right_y": [900, 1500],
+    "header": [260, 690], "caption_center_y": 1400, "face_box": [420, 720, 760, 1300]
+  },
+
+  "palette": {
+    "paper": "#F4ECDC", "paper2": "#EADFC8", "kraft": "#C9A27E", "ink": "#3A2A22", "inkSoft": "#5B4636",
+    "sage": "#9AA57F", "terracotta": "#C8643C", "mustard": "#E9B44C", "blue": "#5D7A99",
+    "claude": "#D97757", "redpen": "#C0392B", "pennRed": "#9A1C1F", "pennNavy": "#1F2F5C", "sticky": "#F7D96B"
+  },
+
+  "grade": {
+    "ae_stabilize": { "region": [0, 20, 720, 280], "strength": 0.8, "smooth_frames": 15 },
+    "moire_fix": { "y0": 330, "y1": 530, "feather": 45 },
+    "flashback": { "in": [7.85, 8.45], "out": [18.45, 19.05] },
+    "lightleak": { "t0": 18.45, "t1": 19.85 },
+    "glow": { "t0": 34.6, "t1": 36.9, "amount": 0.22 }
+  },
+
+  "zoom": [
+    { "t0": 8.0,   "t1": 18.3,  "from": 1.00, "to": 1.06, "ease": "sine" },
+    { "t0": 18.3,  "t1": 19.3,  "from": 1.06, "to": 1.00, "ease": "sine" },
+    { "t0": 19.3,  "t1": 22.5,  "from": 1.00, "to": 1.05, "ease": "sine" },
+    { "t0": 22.5,  "t1": 23.6,  "from": 1.05, "to": 1.00, "ease": "sine" },
+    { "t0": 34.5,  "t1": 36.8,  "from": 1.00, "to": 1.08, "ease": "sine" },
+    { "t0": 36.8,  "t1": 37.9,  "from": 1.08, "to": 1.00, "ease": "sine" },
+    { "t0": 48.04, "t1": 48.30, "from": 1.00, "to": 1.06, "ease": "back" },
+    { "t0": 51.0,  "t1": 51.9,  "from": 1.06, "to": 1.00, "ease": "sine" },
+    { "t0": 57.56, "t1": 57.82, "from": 1.00, "to": 1.10, "ease": "back" },
+    { "t0": 61.95, "t1": 62.9,  "from": 1.10, "to": 1.00, "ease": "sine" }
+  ],
+  "zoom_center": [0.5, 0.52],
+
+  "captions": {
+    "y": 1400, "max_words": 6, "max_chars": 28, "gap_break": 0.3, "hold_after": 0.55,
+    "highlight": {
+      "history": "mustard", "dad": "mustard", "stories": "mustard", "story": "mustard",
+      "fun": "sage", "engaging": "sage", "simple": "sage", "visual": "sage",
+      "lesson": "terracotta", "daily": "mustard", "life": "mustard", "value": "mustard",
+      "claude": "claude", "tomorrow": "mustard", "football": "sage", "mo": "terracotta",
+      "pennsylvania": "blue", "memorize": "redpen", "hated": "redpen", "irrelevant": "redpen"
+    }
+  },
+
+  "cues": {
+    "title":        { "flip": [0.10, 0.62], "hook_in": 0.72, "out": 2.95, "y": 380,
+                      "name": "MORNING PAGES", "by": "by Mo", "hook": "a history story every morning ☀️📜" },
+    "hello":        { "in": 3.36, "out": 6.95, "x": 180, "y": 870, "rot": -7, "name": "Mo" },
+    "pennant":      { "in": 4.18, "out": 7.0, "x": 900, "y": 820, "rot": 8, "text": "PENN", "note": "freshman!" },
+    "chapter":      { "in": 5.48, "write": 1.05, "out": 7.92, "y": 410, "text": "chapter one: why this page?" },
+    "photo":        { "in": 7.85, "out": 18.75 },
+    "flash_label":  { "in": 8.3, "out": 18.5, "y": 300, "text": "growing up…" },
+    "textbook":     { "in": 9.12, "cross": 9.42, "out": 10.6, "x": 185, "y": 890 },
+    "flashcards":   { "cards": [
+                        { "t": 10.88, "title": "NAMES", "body": "Charlemagne · Bismarck · Metternich", "x": 225, "y": 480, "rot": -8 },
+                        { "t": 11.66, "title": "DATES", "body": "1066 · 1492 · 1648", "x": 540, "y": 455, "rot": 4 },
+                        { "t": 12.32, "title": "TREATIES", "body": "Westphalia · Utrecht · Ghent", "x": 855, "y": 485, "rot": -5 }
+                      ],
+                      "memorize": 13.2, "wobble": 13.75, "face": 14.15, "crumple": 15.3, "toss": 15.85, "out": 16.1 },
+    "bridge_broken":{ "in": 16.04, "draw": [16.35, 16.9], "snap": 17.35, "question": 17.62, "out": 18.55,
+                      "left": [215, 505], "right": [865, 505], "left_label": "history", "right_label": "my daily life" },
+    "house":        { "in": 19.34, "out": 22.55, "x": 180, "y": 870 },
+    "dad":          { "in": 19.94, "hearts": 20.42, "hist": 21.58, "out": 22.55, "x": 900, "y": 840 },
+    "storybook":    { "in": 22.5, "scenes": [
+                        { "t": 22.98, "s": "ship" }, { "t": 23.76, "s": "castle" },
+                        { "t": 24.52, "s": "pyramid" }, { "t": 25.22, "s": "temple" }
+                      ], "out": 25.7, "y": 470 },
+    "checklist":    { "in": 25.55, "items": [
+                        { "t": 25.7, "text": "fun" }, { "t": 26.26, "text": "engaging" }, { "t": 27.1, "text": "simple" }
+                      ], "out": 29.85, "x": 200, "y": 905 },
+    "fineprint":    { "in": 27.7, "snip": 28.36, "out": 29.7, "x": 880, "y": 900 },
+    "seal":         { "t": 31.6, "y": 470 },
+    "bridge_fixed": { "in": 32.7, "draw": [33.12, 33.95], "check": 34.1, "out": 34.75 },
+    "sparkles":     { "in": 34.9, "out": 36.95 },
+    "envelope":     { "in": 37.5, "open": 38.76, "out": 39.2, "x": 860, "y": 840 },
+    "calendar":     { "in": 39.0, "rips": [39.18, 39.4, 39.62], "today": 40.34, "new": 41.96, "out": 43.25, "y": 470 },
+    "words":        { "items": [
+                        { "t": 44.38, "w": "simple", "x": 235, "y": 430, "style": "box" },
+                        { "t": 45.1,  "w": "fun!", "x": 845, "y": 410, "style": "marker" },
+                        { "t": 45.72, "w": "engaging", "x": 210, "y": 870, "style": "brush" },
+                        { "t": 46.8,  "w": "VISUAL", "x": 540, "y": 580, "style": "rainbow" }
+                      ], "burst": 46.84, "out": 47.95 },
+    "claude":       { "in": 48.08, "bubble1": [48.38, 49.25], "bubble2": [49.3, 50.75], "thumbs": 50.9, "out": 51.6,
+                      "x": 175, "y": 940,
+                      "text1": "hi!! it's me, Claude 👋", "text2": "…am I doing a good job?",
+                      "tag": "Claude ✏️", "tag_sub": "(the AI doing these doodles)" },
+    "lesson_card":  { "in": 51.6, "seal": 51.95, "note": 54.38, "out": 55.3, "y": 470,
+                      "title": "TODAY'S LESSON:", "note_text": "→ for your daily life ☕" },
+    "follow":       { "in": 55.95, "out": 57.6, "y": 430, "text": "follow for tomorrow's story ☀️" },
+    "soccer":       { "in": 58.4, "bounces": [58.75, 59.3, 59.85, 60.4], "hearts": 60.78, "sticky": 61.5, "out": 62.3,
+                      "x": 890, "y": 860, "note": "(ignore this 🙈)" },
+    "outro":        { "pages": [62.25, 63.2], "title": 63.75, "y": 380, "text": "see you tomorrow ☀️", "sub": "Morning Pages · by Mo" },
+    "claude_bye":   { "in": 63.88, "bubble": 64.05, "x": 150, "y": 1080, "text": "bye!! 👋" }
+  },
+
+  "sfx": [
+    { "t": 0.08,  "s": "k:rpg/bookFlip2",              "db": -6 },
+    { "t": 0.74,  "s": "synth:scribble",               "db": -16 },
+    { "t": 3.34,  "s": "synth:slap",                   "db": -8 },
+    { "t": 4.16,  "s": "synth:whoosh",                 "db": -16 },
+    { "t": 4.3,   "s": "k:rpg/cloth1",                 "db": -16 },
+    { "t": 5.48,  "s": "synth:scribble_long",          "db": -15 },
+    { "t": 7.9,   "s": "synth:swell_down",             "db": -18 },
+    { "t": 8.3,   "s": "synth:typewriter",             "db": -14 },
+    { "t": 9.12,  "s": "k:rpg/bookPlace1",             "db": -6 },
+    { "t": 9.42,  "s": "k:interface/scratch_002",      "db": -10 },
+    { "t": 10.88, "s": "k:impact/impactWood_light_000", "db": -8 },
+    { "t": 11.66, "s": "k:impact/impactWood_light_002", "db": -8 },
+    { "t": 12.32, "s": "k:impact/impactWood_light_004", "db": -8 },
+    { "t": 13.2,  "s": "k:impact/impactSoft_heavy_000", "db": -5 },
+    { "t": 13.75, "s": "k:rpg/creak1",                 "db": -12 },
+    { "t": 15.3,  "s": "synth:crumple",                "db": -8 },
+    { "t": 15.85, "s": "synth:whoosh",                 "db": -14 },
+    { "t": 16.35, "s": "synth:scribble",               "db": -16 },
+    { "t": 17.35, "s": "synth:snap",                   "db": -7 },
+    { "t": 17.62, "s": "k:interface/question_001",     "db": -10 },
+    { "t": 18.45, "s": "synth:swell_up",               "db": -14 },
+    { "t": 19.34, "s": "synth:chime",                  "db": -13 },
+    { "t": 20.42, "s": "synth:pop_hi",                 "db": -16 },
+    { "t": 20.72, "s": "synth:pop_hi2",                "db": -17 },
+    { "t": 21.58, "s": "synth:pop_hi",                 "db": -16 },
+    { "t": 22.5,  "s": "k:rpg/bookOpen",               "db": -6 },
+    { "t": 22.98, "s": "k:rpg/bookFlip1",              "db": -11 },
+    { "t": 22.98, "s": "synth:waves",                  "db": -20 },
+    { "t": 23.76, "s": "k:rpg/bookFlip3",              "db": -11 },
+    { "t": 24.52, "s": "k:rpg/bookFlip2",              "db": -11 },
+    { "t": 25.22, "s": "k:rpg/bookFlip1",              "db": -11 },
+    { "t": 25.7,  "s": "k:interface/tick_001",         "db": -9 },
+    { "t": 26.26, "s": "k:interface/tick_002",         "db": -9 },
+    { "t": 27.1,  "s": "k:interface/tick_004",         "db": -9 },
+    { "t": 27.7,  "s": "k:interface/scroll_001",       "db": -12 },
+    { "t": 28.36, "s": "k:rpg/knifeSlice",             "db": -8 },
+    { "t": 28.5,  "s": "k:interface/drop_002",         "db": -14 },
+    { "t": 31.6,  "s": "k:impact/impactSoft_heavy_001", "db": -4 },
+    { "t": 31.6,  "s": "synth:thud",                   "db": -8 },
+    { "t": 33.12, "s": "synth:scribble",               "db": -16 },
+    { "t": 34.1,  "s": "k:interface/confirmation_001", "db": -11 },
+    { "t": 34.9,  "s": "synth:shimmer",                "db": -15 },
+    { "t": 37.5,  "s": "k:rpg/cloth2",                 "db": -12 },
+    { "t": 38.76, "s": "synth:pop",                    "db": -10 },
+    { "t": 39.18, "s": "synth:rip",                    "db": -10 },
+    { "t": 39.4,  "s": "synth:rip2",                   "db": -11 },
+    { "t": 39.62, "s": "synth:rip",                    "db": -11 },
+    { "t": 40.34, "s": "k:interface/confirmation_002", "db": -12 },
+    { "t": 41.96, "s": "k:impact/impactPlate_light_000", "db": -14 },
+    { "t": 44.38, "s": "synth:pop",                    "db": -11 },
+    { "t": 45.1,  "s": "synth:pop_hi",                 "db": -11 },
+    { "t": 45.72, "s": "synth:pop",                    "db": -11 },
+    { "t": 46.84, "s": "synth:splat",                  "db": -7 },
+    { "t": 48.08, "s": "synth:pop_cute",               "db": -8 },
+    { "t": 48.38, "s": "synth:type_boops:23:0.87",     "db": -18 },
+    { "t": 49.3,  "s": "synth:type_boops:24:1.4",      "db": -18 },
+    { "t": 49.9,  "s": "k:interface/question_002",     "db": -10 },
+    { "t": 50.9,  "s": "synth:boop_up",                "db": -12 },
+    { "t": 51.4,  "s": "synth:boop_down",              "db": -13 },
+    { "t": 51.6,  "s": "k:rpg/cloth3",                 "db": -13 },
+    { "t": 51.95, "s": "k:impact/impactSoft_heavy_002", "db": -5 },
+    { "t": 54.38, "s": "synth:scribble",               "db": -16 },
+    { "t": 55.95, "s": "k:interface/confirmation_003", "db": -12 },
+    { "t": 58.4,  "s": "synth:whoosh",                 "db": -14 },
+    { "t": 58.75, "s": "synth:ball",                   "db": -8 },
+    { "t": 59.05, "s": "synth:whistle",                "db": -17 },
+    { "t": 59.3,  "s": "synth:ball",                   "db": -9 },
+    { "t": 59.85, "s": "synth:ball",                   "db": -9 },
+    { "t": 60.4,  "s": "synth:ball",                   "db": -10 },
+    { "t": 60.78, "s": "synth:pop_hi",                 "db": -15 },
+    { "t": 61.5,  "s": "synth:slap",                   "db": -6 },
+    { "t": 62.25, "s": "k:rpg/bookFlip3",              "db": -10 },
+    { "t": 63.75, "s": "synth:chime",                  "db": -14 },
+    { "t": 63.88, "s": "synth:pop_cute",               "db": -11 },
+    { "t": 64.05, "s": "synth:type_boops:8:0.4",       "db": -19 },
+    { "t": 64.55, "s": "k:rpg/bookClose",              "db": -8 }
+  ],
+
+  "music": {
+    "bpm": 76, "grid_anchor": 18.7, "level_lufs": -25, "duck_db": 7,
+    "sections": [
+      { "t0": 0.0,   "t1": 7.9,   "name": "intro",     "drums": false, "lp_hz": 5200, "glock_motif": true },
+      { "t0": 7.9,   "t1": 18.7,  "name": "flashback", "drums": false, "lp_hz": 950,  "crackle": 2.0, "wobble": 2.0 },
+      { "t0": 18.7,  "t1": 47.9,  "name": "groove",    "drums": true,  "lp_hz": 5200, "filter_open": 0.8 },
+      { "t0": 47.9,  "t1": 51.86, "name": "cameo",     "drums": false, "lp_hz": 5200, "glock_sting": 48.1 },
+      { "t0": 51.86, "t1": 61.33, "name": "groove2",   "drums": true,  "lp_hz": 5200 },
+      { "t0": 61.33, "t1": 61.9,  "name": "dropout",   "silence": true },
+      { "t0": 61.9,  "t1": 64.95, "name": "outro",     "drums": false, "lp_hz": 5200, "final_chord": 64.45 }
+    ]
+  }
+}

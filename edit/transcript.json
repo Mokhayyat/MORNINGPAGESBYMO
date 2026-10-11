@@ -1,0 +1,1889 @@
+{
+ "language": "en",
+ "duration": 64.952,
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 4.52,
+   "text": "Hey everyone, thank you so much for clicking on my page. I'm Mo, a freshman at the University"
+  },
+  {
+   "start": 4.52,
+   "end": 8.38,
+   "text": "of Pennsylvania, and I thought I'd tell you a bit about why I started this page. So"
+  },
+  {
+   "start": 8.38,
+   "end": 13.24,
+   "text": "growing up, I hated history. There'd be these names and dates and treaties that I had to"
+  },
+  {
+   "start": 13.24,
+   "end": 17.92,
+   "text": "memorize, and I didn't enjoy that. There was no translation between that and my daily"
+  },
+  {
+   "start": 17.92,
+   "end": 22.52,
+   "text": "life. But then I'd go home, and my dad, who was absolutely obsessed with history, would"
+  },
+  {
+   "start": 22.52,
+   "end": 26.3,
+   "text": "tell me these stories I'd never heard before, and he'd say them in a way that was fun and"
+  },
+  {
+   "start": 26.3,
+   "end": 31.34,
+   "text": "engaging and simple enough that it left out all those relevant details. And it finished off with"
+  },
+  {
+   "start": 31.34,
+   "end": 36.34,
+   "text": "one lesson that I could take from the story and apply into my daily life. And I saw so much value"
+  },
+  {
+   "start": 36.34,
+   "end": 40.16,
+   "text": "in that. So I thought I'd share that value with you guys. Every single day, I'm going to be"
+  },
+  {
+   "start": 40.16,
+   "end": 44.42,
+   "text": "thinking one story that I hope you guys have never heard before and explaining it in a way that's"
+  },
+  {
+   "start": 44.42,
+   "end": 49.16,
+   "text": "simple and fun and engaging and hopefully pretty visual as well. Claude will help me with that."
+  },
+  {
+   "start": 49.98,
+   "end": 53.86,
+   "text": "And I'm going to be finishing off with one lesson from that story that you can take and"
+  },
+  {
+   "start": 53.86,
+   "end": 58.24,
+   "text": "apply into your daily life. So I hope you guys gain some value from this account. If you see"
+  },
+  {
+   "start": 58.24,
+   "end": 61.52,
+   "text": "some football content on the account as well, that's just because I really love the game. So"
+  },
+  {
+   "start": 61.52,
+   "end": 64.4,
+   "text": "ignore that. But anyway, I'll see you guys tomorrow."
+  }
+ ],
+ "words": [
+  {
+   "start": 0.0,
+   "end": 0.56,
+   "word": "Hey",
+   "caption": "Hey",
+   "p": 0.994
+  },
+  {
+   "start": 0.56,
+   "end": 0.88,
+   "word": "everyone,",
+   "caption": "everyone,",
+   "p": 0.896
+  },
+  {
+   "start": 1.16,
+   "end": 1.3,
+   "word": "thank",
+   "caption": "thank",
+   "p": 1.0
+  },
+  {
+   "start": 1.3,
+   "end": 1.48,
+   "word": "you",
+   "caption": "you",
+   "p": 1.0
+  },
+  {
+   "start": 1.48,
+   "end": 1.72,
+   "word": "so",
+   "caption": "so",
+   "p": 1.0
+  },
+  {
+   "start": 1.72,
+   "end": 1.9,
+   "word": "much",
+   "caption": "much",
+   "p": 1.0
+  },
+  {
+   "start": 1.9,
+   "end": 2.04,
+   "word": "for",
+   "caption": "for",
+   "p": 1.0
+  },
+  {
+   "start": 2.04,
+   "end": 2.22,
+   "word": "clicking",
+   "caption": "clicking",
+   "p": 0.999
+  },
+  {
+   "start": 2.22,
+   "end": 2.36,
+   "word": "on",
+   "caption": "on",
+   "p": 0.935
+  },
+  {
+   "start": 2.36,
+   "end": 2.42,
+   "word": "my",
+   "caption": "my",
+   "p": 1.0
+  },
+  {
+   "start": 2.42,
+   "end": 2.78,
+   "word": "page.",
+   "caption": "page.",
+   "p": 1.0
+  },
+  {
+   "start": 3.0,
+   "end": 3.4,
+   "word": "I'm",
+   "caption": "I'm",
+   "p": 1.0
+  },
+  {
+   "start": 3.4,
+   "end": 3.54,
+   "word": "Mo,",
+   "caption": "Mo,",
+   "p": 0.988
+  },
+  {
+   "start": 3.66,
+   "end": 3.78,
+   "word": "a",
+   "caption": "a",
+   "p": 1.0
+  },
+  {
+   "start": 3.78,
+   "end": 4.0,
+   "word": "freshman",
+   "caption": "freshman",
+   "p": 0.998
+  },
+  {
+   "start": 4.0,
+   "end": 4.16,
+   "word": "at",
+   "caption": "at",
+   "p": 1.0
+  },
+  {
+   "start": 4.16,
+   "end": 4.22,
+   "word": "the",
+   "caption": "the",
+   "p": 1.0
+  },
+  {
+   "start": 4.22,
+   "end": 4.52,
+   "word": "University",
+   "caption": "University",
+   "p": 1.0
+  },
+  {
+   "start": 4.52,
+   "end": 4.74,
+   "word": "of",
+   "caption": "of",
+   "p": 1.0
+  },
+  {
+   "start": 4.74,
+   "end": 5.2,
+   "word": "Pennsylvania,",
+   "caption": "Pennsylvania,",
+   "p": 1.0
+  },
+  {
+   "start": 5.2,
+   "end": 5.5,
+   "word": "and",
+   "caption": "and",
+   "p": 1.0
+  },
+  {
+   "start": 5.5,
+   "end": 5.6,
+   "word": "I",
+   "caption": "I",
+   "p": 1.0
+  },
+  {
+   "start": 5.6,
+   "end": 5.74,
+   "word": "thought",
+   "caption": "thought",
+   "p": 1.0
+  },
+  {
+   "start": 5.74,
+   "end": 5.9,
+   "word": "I'd",
+   "caption": "I'd",
+   "p": 1.0
+  },
+  {
+   "start": 5.9,
+   "end": 6.02,
+   "word": "tell",
+   "caption": "tell",
+   "p": 1.0
+  },
+  {
+   "start": 6.02,
+   "end": 6.12,
+   "word": "you",
+   "caption": "you",
+   "p": 1.0
+  },
+  {
+   "start": 6.12,
+   "end": 6.22,
+   "word": "a",
+   "caption": "a",
+   "p": 1.0
+  },
+  {
+   "start": 6.22,
+   "end": 6.28,
+   "word": "bit",
+   "caption": "bit",
+   "p": 1.0
+  },
+  {
+   "start": 6.28,
+   "end": 6.5,
+   "word": "about",
+   "caption": "about",
+   "p": 1.0
+  },
+  {
+   "start": 6.5,
+   "end": 6.86,
+   "word": "why",
+   "caption": "why",
+   "p": 1.0
+  },
+  {
+   "start": 6.86,
+   "end": 7.04,
+   "word": "I",
+   "caption": "I",
+   "p": 1.0
+  },
+  {
+   "start": 7.04,
+   "end": 7.3,
+   "word": "started",
+   "caption": "started",
+   "p": 1.0
+  },
+  {
+   "start": 7.3,
+   "end": 7.46,
+   "word": "this",
+   "caption": "this",
+   "p": 1.0
+  },
+  {
+   "start": 7.46,
+   "end": 7.76,
+   "word": "page.",
+   "caption": "page.",
+   "p": 1.0
+  },
+  {
+   "start": 7.98,
+   "end": 8.38,
+   "word": "So",
+   "caption": "So",
+   "p": 0.996
+  },
+  {
+   "start": 8.38,
+   "end": 8.74,
+   "word": "growing",
+   "caption": "growing",
+   "p": 0.7
+  },
+  {
+   "start": 8.74,
+   "end": 8.96,
+   "word": "up,",
+   "caption": "up,",
+   "p": 1.0
+  },
+  {
+   "start": 9.1,
+   "end": 9.16,
+   "word": "I",
+   "caption": "I",
+   "p": 1.0
+  },
+  {
+   "start": 9.16,
+   "end": 9.58,
+   "word": "hated",
+   "caption": "hated",
+   "p": 1.0
+  },
+  {
+   "start": 9.58,
+   "end": 10.04,
+   "word": "history.",
+   "caption": "history.",
+   "p": 1.0
+  },
+  {
+   "start": 10.26,
+   "end": 10.6,
+   "word": "There'd",
+   "caption": "There'd",
+   "p": 0.999
+  },
+  {
+   "start": 10.6,
+   "end": 10.68,
+   "word": "be",
+   "caption": "be",
+   "p": 1.0
+  },
+  {
+   "start": 10.68,
+   "end": 10.92,
+   "word": "these",
+   "caption": "these",
+   "p": 1.0
+  },
+  {
+   "start": 10.92,
+   "end": 11.42,
+   "word": "names",
+   "caption": "names",
+   "p": 1.0
+  },
+  {
+   "start": 11.42,
+   "end": 11.7,
+   "word": "and",
+   "caption": "and",
+   "p": 0.985
+  },
+  {
+   "start": 11.7,
+   "end": 12.12,
+   "word": "dates",
+   "caption": "dates",
+   "p": 1.0
+  },
+  {
+   "start": 12.12,
+   "end": 12.36,
+   "word": "and",
+   "caption": "and",
+   "p": 1.0
+  },
+  {
+   "start": 12.36,
+   "end": 12.74,
+   "word": "treaties",
+   "caption": "treaties",
+   "p": 0.995
+  },
+  {
+   "start": 12.74,
+   "end": 12.98,
+   "word": "that",
+   "caption": "that",
+   "p": 1.0
+  },
+  {
+   "start": 12.98,
+   "end": 13.04,
+   "word": "I",
+   "caption": "I",
+   "p": 1.0
+  },
+  {
+   "start": 13.04,
+   "end": 13.14,
+   "word": "had",
+   "caption": "had",
+   "p": 1.0
+  },
+  {
+   "start": 13.14,
+   "end": 13.24,
+   "word": "to",
+   "caption": "to",
+   "p": 1.0
+  },
+  {
+   "start": 13.24,
+   "end": 13.56,
+   "word": "memorize,",
+   "caption": "memorize,",
+   "p": 0.998
+  },
+  {
+   "start": 13.56,
+   "end": 14.46,
+   "word": "and",
+   "caption": "and",
+   "p": 1.0
+  },
+  {
+   "start": 14.46,
+   "end": 15.32,
+   "word": "I",
+   "caption": "I",
+   "p": 1.0
+  },
+  {
+   "start": 15.32,
+   "end": 15.56,
+   "word": "didn't",
+   "caption": "didn't",
+   "p": 1.0
+  },
+  {
+   "start": 15.56,
+   "end": 15.82,
+   "word": "enjoy",
+   "caption": "enjoy",
+   "p": 1.0
+  },
+  {
+   "start": 15.82,
+   "end": 15.98,
+   "word": "that.",
+   "caption": "that.",
+   "p": 1.0
+  },
+  {
+   "start": 16.06,
+   "end": 16.12,
+   "word": "There",
+   "caption": "There",
+   "p": 0.999
+  },
+  {
+   "start": 16.12,
+   "end": 16.26,
+   "word": "was",
+   "caption": "was",
+   "p": 1.0
+  },
+  {
+   "start": 16.26,
+   "end": 16.4,
+   "word": "no",
+   "caption": "no",
+   "p": 1.0
+  },
+  {
+   "start": 16.4,
+   "end": 16.76,
+   "word": "translation",
+   "caption": "translation",
+   "p": 0.999
+  },
+  {
+   "start": 16.76,
+   "end": 17.04,
+   "word": "between",
+   "caption": "between",
+   "p": 1.0
+  },
+  {
+   "start": 17.04,
+   "end": 17.42,
+   "word": "that",
+   "caption": "that",
+   "p": 1.0
+  },
+  {
+   "start": 17.42,
+   "end": 17.58,
+   "word": "and",
+   "caption": "and",
+   "p": 1.0
+  },
+  {
+   "start": 17.58,
+   "end": 17.72,
+   "word": "my",
+   "caption": "my",
+   "p": 1.0
+  },
+  {
+   "start": 17.72,
+   "end": 17.92,
+   "word": "daily",
+   "caption": "daily",
+   "p": 1.0
+  },
+  {
+   "start": 17.92,
+   "end": 18.24,
+   "word": "life.",
+   "caption": "life.",
+   "p": 1.0
+  },
+  {
+   "start": 18.72,
+   "end": 19.12,
+   "word": "But",
+   "caption": "But",
+   "p": 1.0
+  },
+  {
+   "start": 19.12,
+   "end": 19.22,
+   "word": "then",
+   "caption": "then",
+   "p": 1.0
+  },
+  {
+   "start": 19.22,
+   "end": 19.38,
+   "word": "I'd",
+   "caption": "I'd",
+   "p": 1.0
+  },
+  {
+   "start": 19.38,
+   "end": 19.48,
+   "word": "go",
+   "caption": "go",
+   "p": 1.0
+  },
+  {
+   "start": 19.48,
+   "end": 19.74,
+   "word": "home,",
+   "caption": "home,",
+   "p": 1.0
+  },
+  {
+   "start": 19.74,
+   "end": 19.86,
+   "word": "and",
+   "caption": "and",
+   "p": 1.0
+  },
+  {
+   "start": 19.86,
+   "end": 19.98,
+   "word": "my",
+   "caption": "my",
+   "p": 1.0
+  },
+  {
+   "start": 19.98,
+   "end": 20.18,
+   "word": "dad,",
+   "caption": "dad,",
+   "p": 1.0
+  },
+  {
+   "start": 20.24,
+   "end": 20.3,
+   "word": "who",
+   "caption": "who",
+   "p": 1.0
+  },
+  {
+   "start": 20.3,
+   "end": 20.46,
+   "word": "was",
+   "caption": "was",
+   "p": 1.0
+  },
+  {
+   "start": 20.46,
+   "end": 20.8,
+   "word": "absolutely",
+   "caption": "absolutely",
+   "p": 0.999
+  },
+  {
+   "start": 20.8,
+   "end": 21.36,
+   "word": "obsessed",
+   "caption": "obsessed",
+   "p": 1.0
+  },
+  {
+   "start": 21.36,
+   "end": 21.62,
+   "word": "with",
+   "caption": "with",
+   "p": 1.0
+  },
+  {
+   "start": 21.62,
+   "end": 21.98,
+   "word": "history,",
+   "caption": "history,",
+   "p": 1.0
+  },
+  {
+   "start": 22.18,
+   "end": 22.52,
+   "word": "would",
+   "caption": "would",
+   "p": 1.0
+  },
+  {
+   "start": 22.52,
+   "end": 22.68,
+   "word": "tell",
+   "caption": "tell",
+   "p": 1.0
+  },
+  {
+   "start": 22.68,
+   "end": 22.8,
+   "word": "me",
+   "caption": "me",
+   "p": 1.0
+  },
+  {
+   "start": 22.8,
+   "end": 23.0,
+   "word": "these",
+   "caption": "these",
+   "p": 1.0
+  },
+  {
+   "start": 23.0,
+   "end": 23.36,
+   "word": "stories",
+   "caption": "stories",
+   "p": 1.0
+  },
+  {
+   "start": 23.36,
+   "end": 23.6,
+   "word": "I'd",
+   "caption": "I'd",
+   "p": 1.0
+  },
+  {
+   "start": 23.6,
+   "end": 23.78,
+   "word": "never",
+   "caption": "never",
+   "p": 1.0
+  },
+  {
+   "start": 23.78,
+   "end": 23.98,
+   "word": "heard",
+   "caption": "heard",
+   "p": 1.0
+  },
+  {
+   "start": 23.98,
+   "end": 24.26,
+   "word": "before,",
+   "caption": "before,",
+   "p": 1.0
+  },
+  {
+   "start": 24.3,
+   "end": 24.72,
+   "word": "and",
+   "caption": "and",
+   "p": 1.0
+  },
+  {
+   "start": 24.72,
+   "end": 24.86,
+   "word": "he'd",
+   "caption": "he'd",
+   "p": 0.999
+  },
+  {
+   "start": 24.86,
+   "end": 24.96,
+   "word": "say",
+   "caption": "say",
+   "p": 0.999
+  },
+  {
+   "start": 24.96,
+   "end": 25.1,
+   "word": "them",
+   "caption": "them",
+   "p": 1.0
+  },
+  {
+   "start": 25.1,
+   "end": 25.2,
+   "word": "in",
+   "caption": "in",
+   "p": 1.0
+  },
+  {
+   "start": 25.2,
+   "end": 25.26,
+   "word": "a",
+   "caption": "a",
+   "p": 1.0
+  },
+  {
+   "start": 25.26,
+   "end": 25.36,
+   "word": "way",
+   "caption": "way",
+   "p": 1.0
+  },
+  {
+   "start": 25.36,
+   "end": 25.5,
+   "word": "that",
+   "caption": "that",
+   "p": 1.0
+  },
+  {
+   "start": 25.5,
+   "end": 25.74,
+   "word": "was",
+   "caption": "was",
+   "p": 1.0
+  },
+  {
+   "start": 25.74,
+   "end": 26.12,
+   "word": "fun",
+   "caption": "fun",
+   "p": 1.0
+  },
+  {
+   "start": 26.12,
+   "end": 26.3,
+   "word": "and",
+   "caption": "and",
+   "p": 0.998
+  },
+  {
+   "start": 26.3,
+   "end": 26.56,
+   "word": "engaging",
+   "caption": "engaging",
+   "p": 0.074
+  },
+  {
+   "start": 26.56,
+   "end": 27.14,
+   "word": "and",
+   "caption": "and",
+   "p": 0.847
+  },
+  {
+   "start": 27.14,
+   "end": 27.54,
+   "word": "simple",
+   "caption": "simple",
+   "p": 0.996
+  },
+  {
+   "start": 27.54,
+   "end": 27.8,
+   "word": "enough",
+   "caption": "enough",
+   "p": 1.0
+  },
+  {
+   "start": 27.8,
+   "end": 27.94,
+   "word": "that",
+   "caption": "that",
+   "p": 0.996
+  },
+  {
+   "start": 27.94,
+   "end": 28.04,
+   "word": "it",
+   "caption": "it",
+   "p": 0.999
+  },
+  {
+   "start": 28.04,
+   "end": 28.38,
+   "word": "left",
+   "caption": "left",
+   "p": 1.0
+  },
+  {
+   "start": 28.38,
+   "end": 28.58,
+   "word": "out",
+   "caption": "out",
+   "p": 0.996
+  },
+  {
+   "start": 28.58,
+   "end": 28.76,
+   "word": "all",
+   "caption": "all",
+   "p": 0.996
+  },
+  {
+   "start": 28.76,
+   "end": 28.88,
+   "word": "those",
+   "caption": "those",
+   "p": 0.964
+  },
+  {
+   "start": 28.88,
+   "end": 29.14,
+   "word": "relevant",
+   "caption": "irrelevant",
+   "p": 0.987
+  },
+  {
+   "start": 29.14,
+   "end": 29.56,
+   "word": "details.",
+   "caption": "details.",
+   "p": 1.0
+  },
+  {
+   "start": 29.9,
+   "end": 30.3,
+   "word": "And",
+   "caption": "And",
+   "p": 0.972
+  },
+  {
+   "start": 30.3,
+   "end": 30.4,
+   "word": "it",
+   "caption": "it",
+   "p": 0.72
+  },
+  {
+   "start": 30.4,
+   "end": 30.7,
+   "word": "finished",
+   "caption": "finished",
+   "p": 0.996
+  },
+  {
+   "start": 30.7,
+   "end": 31.08,
+   "word": "off",
+   "caption": "off",
+   "p": 0.999
+  },
+  {
+   "start": 31.08,
+   "end": 31.34,
+   "word": "with",
+   "caption": "with",
+   "p": 1.0
+  },
+  {
+   "start": 31.34,
+   "end": 31.64,
+   "word": "one",
+   "caption": "one",
+   "p": 1.0
+  },
+  {
+   "start": 31.64,
+   "end": 32.06,
+   "word": "lesson",
+   "caption": "lesson",
+   "p": 1.0
+  },
+  {
+   "start": 32.06,
+   "end": 32.5,
+   "word": "that",
+   "caption": "that",
+   "p": 0.999
+  },
+  {
+   "start": 32.5,
+   "end": 32.58,
+   "word": "I",
+   "caption": "I",
+   "p": 0.999
+  },
+  {
+   "start": 32.58,
+   "end": 32.7,
+   "word": "could",
+   "caption": "could",
+   "p": 0.995
+  },
+  {
+   "start": 32.7,
+   "end": 32.88,
+   "word": "take",
+   "caption": "take",
+   "p": 1.0
+  },
+  {
+   "start": 32.88,
+   "end": 33.02,
+   "word": "from",
+   "caption": "from",
+   "p": 1.0
+  },
+  {
+   "start": 33.02,
+   "end": 33.14,
+   "word": "the",
+   "caption": "the",
+   "p": 0.999
+  },
+  {
+   "start": 33.14,
+   "end": 33.34,
+   "word": "story",
+   "caption": "story",
+   "p": 1.0
+  },
+  {
+   "start": 33.34,
+   "end": 33.46,
+   "word": "and",
+   "caption": "and",
+   "p": 0.999
+  },
+  {
+   "start": 33.46,
+   "end": 33.68,
+   "word": "apply",
+   "caption": "apply",
+   "p": 0.994
+  },
+  {
+   "start": 33.68,
+   "end": 33.82,
+   "word": "into",
+   "caption": "into",
+   "p": 0.77
+  },
+  {
+   "start": 33.82,
+   "end": 33.96,
+   "word": "my",
+   "caption": "my",
+   "p": 1.0
+  },
+  {
+   "start": 33.96,
+   "end": 34.14,
+   "word": "daily",
+   "caption": "daily",
+   "p": 1.0
+  },
+  {
+   "start": 34.14,
+   "end": 34.4,
+   "word": "life.",
+   "caption": "life.",
+   "p": 1.0
+  },
+  {
+   "start": 34.54,
+   "end": 34.94,
+   "word": "And",
+   "caption": "And",
+   "p": 0.999
+  },
+  {
+   "start": 34.94,
+   "end": 35.04,
+   "word": "I",
+   "caption": "I",
+   "p": 1.0
+  },
+  {
+   "start": 35.04,
+   "end": 35.22,
+   "word": "saw",
+   "caption": "saw",
+   "p": 1.0
+  },
+  {
+   "start": 35.22,
+   "end": 35.58,
+   "word": "so",
+   "caption": "so",
+   "p": 1.0
+  },
+  {
+   "start": 35.58,
+   "end": 36.0,
+   "word": "much",
+   "caption": "much",
+   "p": 1.0
+  },
+  {
+   "start": 36.0,
+   "end": 36.34,
+   "word": "value",
+   "caption": "value",
+   "p": 1.0
+  },
+  {
+   "start": 36.34,
+   "end": 36.52,
+   "word": "in",
+   "caption": "in",
+   "p": 1.0
+  },
+  {
+   "start": 36.52,
+   "end": 36.74,
+   "word": "that.",
+   "caption": "that.",
+   "p": 1.0
+  },
+  {
+   "start": 37.14,
+   "end": 37.54,
+   "word": "So",
+   "caption": "So",
+   "p": 1.0
+  },
+  {
+   "start": 37.54,
+   "end": 37.7,
+   "word": "I",
+   "caption": "I",
+   "p": 0.965
+  },
+  {
+   "start": 37.7,
+   "end": 37.82,
+   "word": "thought",
+   "caption": "thought",
+   "p": 1.0
+  },
+  {
+   "start": 37.82,
+   "end": 37.98,
+   "word": "I'd",
+   "caption": "I'd",
+   "p": 0.999
+  },
+  {
+   "start": 37.98,
+   "end": 38.14,
+   "word": "share",
+   "caption": "share",
+   "p": 1.0
+  },
+  {
+   "start": 38.14,
+   "end": 38.28,
+   "word": "that",
+   "caption": "that",
+   "p": 1.0
+  },
+  {
+   "start": 38.28,
+   "end": 38.52,
+   "word": "value",
+   "caption": "value",
+   "p": 1.0
+  },
+  {
+   "start": 38.52,
+   "end": 38.7,
+   "word": "with",
+   "caption": "with",
+   "p": 1.0
+  },
+  {
+   "start": 38.7,
+   "end": 38.8,
+   "word": "you",
+   "caption": "you",
+   "p": 1.0
+  },
+  {
+   "start": 38.8,
+   "end": 39.06,
+   "word": "guys.",
+   "caption": "guys.",
+   "p": 0.999
+  },
+  {
+   "start": 39.22,
+   "end": 39.44,
+   "word": "Every",
+   "caption": "Every",
+   "p": 0.999
+  },
+  {
+   "start": 39.44,
+   "end": 39.66,
+   "word": "single",
+   "caption": "single",
+   "p": 1.0
+  },
+  {
+   "start": 39.66,
+   "end": 39.84,
+   "word": "day,",
+   "caption": "day,",
+   "p": 1.0
+  },
+  {
+   "start": 39.92,
+   "end": 40.0,
+   "word": "I'm",
+   "caption": "I'm",
+   "p": 1.0
+  },
+  {
+   "start": 40.0,
+   "end": 40.06,
+   "word": "going",
+   "caption": "going",
+   "p": 0.858
+  },
+  {
+   "start": 40.06,
+   "end": 40.08,
+   "word": "to",
+   "caption": "to",
+   "p": 1.0
+  },
+  {
+   "start": 40.08,
+   "end": 40.16,
+   "word": "be",
+   "caption": "be",
+   "p": 1.0
+  },
+  {
+   "start": 40.16,
+   "end": 40.38,
+   "word": "thinking",
+   "caption": "picking",
+   "p": 0.694
+  },
+  {
+   "start": 40.38,
+   "end": 40.7,
+   "word": "one",
+   "caption": "one",
+   "p": 0.996
+  },
+  {
+   "start": 40.7,
+   "end": 41.08,
+   "word": "story",
+   "caption": "story",
+   "p": 1.0
+  },
+  {
+   "start": 41.08,
+   "end": 41.38,
+   "word": "that",
+   "caption": "that",
+   "p": 1.0
+  },
+  {
+   "start": 41.38,
+   "end": 41.48,
+   "word": "I",
+   "caption": "I",
+   "p": 1.0
+  },
+  {
+   "start": 41.48,
+   "end": 41.62,
+   "word": "hope",
+   "caption": "hope",
+   "p": 1.0
+  },
+  {
+   "start": 41.62,
+   "end": 41.74,
+   "word": "you",
+   "caption": "you",
+   "p": 1.0
+  },
+  {
+   "start": 41.74,
+   "end": 41.86,
+   "word": "guys",
+   "caption": "guys",
+   "p": 0.999
+  },
+  {
+   "start": 41.86,
+   "end": 41.98,
+   "word": "have",
+   "caption": "have",
+   "p": 1.0
+  },
+  {
+   "start": 41.98,
+   "end": 42.14,
+   "word": "never",
+   "caption": "never",
+   "p": 1.0
+  },
+  {
+   "start": 42.14,
+   "end": 42.32,
+   "word": "heard",
+   "caption": "heard",
+   "p": 1.0
+  },
+  {
+   "start": 42.32,
+   "end": 42.62,
+   "word": "before",
+   "caption": "before",
+   "p": 0.999
+  },
+  {
+   "start": 42.62,
+   "end": 43.32,
+   "word": "and",
+   "caption": "and",
+   "p": 0.834
+  },
+  {
+   "start": 43.32,
+   "end": 43.68,
+   "word": "explaining",
+   "caption": "explaining",
+   "p": 0.993
+  },
+  {
+   "start": 43.68,
+   "end": 43.82,
+   "word": "it",
+   "caption": "it",
+   "p": 0.91
+  },
+  {
+   "start": 43.82,
+   "end": 43.9,
+   "word": "in",
+   "caption": "in",
+   "p": 1.0
+  },
+  {
+   "start": 43.9,
+   "end": 43.98,
+   "word": "a",
+   "caption": "a",
+   "p": 1.0
+  },
+  {
+   "start": 43.98,
+   "end": 44.08,
+   "word": "way",
+   "caption": "way",
+   "p": 0.999
+  },
+  {
+   "start": 44.08,
+   "end": 44.42,
+   "word": "that's",
+   "caption": "that's",
+   "p": 0.999
+  },
+  {
+   "start": 44.42,
+   "end": 44.84,
+   "word": "simple",
+   "caption": "simple",
+   "p": 1.0
+  },
+  {
+   "start": 44.84,
+   "end": 45.14,
+   "word": "and",
+   "caption": "and",
+   "p": 0.999
+  },
+  {
+   "start": 45.14,
+   "end": 45.54,
+   "word": "fun",
+   "caption": "fun",
+   "p": 1.0
+  },
+  {
+   "start": 45.54,
+   "end": 45.76,
+   "word": "and",
+   "caption": "and",
+   "p": 1.0
+  },
+  {
+   "start": 45.76,
+   "end": 46.08,
+   "word": "engaging",
+   "caption": "engaging",
+   "p": 1.0
+  },
+  {
+   "start": 46.08,
+   "end": 46.24,
+   "word": "and",
+   "caption": "and",
+   "p": 0.987
+  },
+  {
+   "start": 46.24,
+   "end": 46.44,
+   "word": "hopefully",
+   "caption": "hopefully",
+   "p": 1.0
+  },
+  {
+   "start": 46.44,
+   "end": 46.84,
+   "word": "pretty",
+   "caption": "pretty",
+   "p": 1.0
+  },
+  {
+   "start": 46.84,
+   "end": 47.3,
+   "word": "visual",
+   "caption": "visual",
+   "p": 1.0
+  },
+  {
+   "start": 47.3,
+   "end": 47.64,
+   "word": "as",
+   "caption": "as",
+   "p": 1.0
+  },
+  {
+   "start": 47.64,
+   "end": 47.84,
+   "word": "well.",
+   "caption": "well.",
+   "p": 1.0
+  },
+  {
+   "start": 48.14,
+   "end": 48.38,
+   "word": "Claude",
+   "caption": "Claude",
+   "p": 0.992
+  },
+  {
+   "start": 48.38,
+   "end": 48.5,
+   "word": "will",
+   "caption": "will",
+   "p": 0.999
+  },
+  {
+   "start": 48.5,
+   "end": 48.62,
+   "word": "help",
+   "caption": "help",
+   "p": 0.999
+  },
+  {
+   "start": 48.62,
+   "end": 48.74,
+   "word": "me",
+   "caption": "me",
+   "p": 1.0
+  },
+  {
+   "start": 48.74,
+   "end": 48.88,
+   "word": "with",
+   "caption": "with",
+   "p": 1.0
+  },
+  {
+   "start": 48.88,
+   "end": 49.16,
+   "word": "that.",
+   "caption": "that.",
+   "p": 1.0
+  },
+  {
+   "start": 49.98,
+   "end": 50.38,
+   "word": "And",
+   "caption": "And",
+   "p": 0.979
+  },
+  {
+   "start": 50.38,
+   "end": 50.6,
+   "word": "I'm",
+   "caption": "I'm",
+   "p": 1.0
+  },
+  {
+   "start": 50.6,
+   "end": 50.64,
+   "word": "going",
+   "caption": "going",
+   "p": 0.994
+  },
+  {
+   "start": 50.64,
+   "end": 50.7,
+   "word": "to",
+   "caption": "to",
+   "p": 1.0
+  },
+  {
+   "start": 50.7,
+   "end": 50.78,
+   "word": "be",
+   "caption": "be",
+   "p": 0.999
+  },
+  {
+   "start": 50.78,
+   "end": 51.02,
+   "word": "finishing",
+   "caption": "finishing",
+   "p": 1.0
+  },
+  {
+   "start": 51.02,
+   "end": 51.34,
+   "word": "off",
+   "caption": "off",
+   "p": 1.0
+  },
+  {
+   "start": 51.34,
+   "end": 51.62,
+   "word": "with",
+   "caption": "with",
+   "p": 1.0
+  },
+  {
+   "start": 51.62,
+   "end": 51.98,
+   "word": "one",
+   "caption": "one",
+   "p": 1.0
+  },
+  {
+   "start": 51.98,
+   "end": 52.42,
+   "word": "lesson",
+   "caption": "lesson",
+   "p": 1.0
+  },
+  {
+   "start": 52.42,
+   "end": 52.7,
+   "word": "from",
+   "caption": "from",
+   "p": 0.999
+  },
+  {
+   "start": 52.7,
+   "end": 52.88,
+   "word": "that",
+   "caption": "that",
+   "p": 1.0
+  },
+  {
+   "start": 52.88,
+   "end": 53.16,
+   "word": "story",
+   "caption": "story",
+   "p": 1.0
+  },
+  {
+   "start": 53.16,
+   "end": 53.32,
+   "word": "that",
+   "caption": "that",
+   "p": 1.0
+  },
+  {
+   "start": 53.32,
+   "end": 53.42,
+   "word": "you",
+   "caption": "you",
+   "p": 1.0
+  },
+  {
+   "start": 53.42,
+   "end": 53.56,
+   "word": "can",
+   "caption": "can",
+   "p": 1.0
+  },
+  {
+   "start": 53.56,
+   "end": 53.76,
+   "word": "take",
+   "caption": "take",
+   "p": 0.999
+  },
+  {
+   "start": 53.76,
+   "end": 53.86,
+   "word": "and",
+   "caption": "and",
+   "p": 0.998
+  },
+  {
+   "start": 53.86,
+   "end": 54.14,
+   "word": "apply",
+   "caption": "apply",
+   "p": 0.672
+  },
+  {
+   "start": 54.14,
+   "end": 54.3,
+   "word": "into",
+   "caption": "into",
+   "p": 0.713
+  },
+  {
+   "start": 54.3,
+   "end": 54.42,
+   "word": "your",
+   "caption": "your",
+   "p": 0.999
+  },
+  {
+   "start": 54.42,
+   "end": 54.58,
+   "word": "daily",
+   "caption": "daily",
+   "p": 1.0
+  },
+  {
+   "start": 54.58,
+   "end": 54.86,
+   "word": "life.",
+   "caption": "life.",
+   "p": 1.0
+  },
+  {
+   "start": 55.44,
+   "end": 55.76,
+   "word": "So",
+   "caption": "So",
+   "p": 0.873
+  },
+  {
+   "start": 55.76,
+   "end": 55.86,
+   "word": "I",
+   "caption": "I",
+   "p": 0.918
+  },
+  {
+   "start": 55.86,
+   "end": 56.02,
+   "word": "hope",
+   "caption": "hope",
+   "p": 1.0
+  },
+  {
+   "start": 56.02,
+   "end": 56.16,
+   "word": "you",
+   "caption": "you",
+   "p": 1.0
+  },
+  {
+   "start": 56.16,
+   "end": 56.32,
+   "word": "guys",
+   "caption": "guys",
+   "p": 0.998
+  },
+  {
+   "start": 56.32,
+   "end": 56.6,
+   "word": "gain",
+   "caption": "gain",
+   "p": 0.931
+  },
+  {
+   "start": 56.6,
+   "end": 56.76,
+   "word": "some",
+   "caption": "some",
+   "p": 1.0
+  },
+  {
+   "start": 56.76,
+   "end": 56.98,
+   "word": "value",
+   "caption": "value",
+   "p": 0.999
+  },
+  {
+   "start": 56.98,
+   "end": 57.12,
+   "word": "from",
+   "caption": "from",
+   "p": 1.0
+  },
+  {
+   "start": 57.12,
+   "end": 57.26,
+   "word": "this",
+   "caption": "this",
+   "p": 1.0
+  },
+  {
+   "start": 57.26,
+   "end": 57.54,
+   "word": "account.",
+   "caption": "account.",
+   "p": 1.0
+  },
+  {
+   "start": 57.62,
+   "end": 57.94,
+   "word": "If",
+   "caption": "If",
+   "p": 1.0
+  },
+  {
+   "start": 57.94,
+   "end": 58.06,
+   "word": "you",
+   "caption": "you",
+   "p": 1.0
+  },
+  {
+   "start": 58.06,
+   "end": 58.24,
+   "word": "see",
+   "caption": "see",
+   "p": 0.999
+  },
+  {
+   "start": 58.24,
+   "end": 58.44,
+   "word": "some",
+   "caption": "some",
+   "p": 0.998
+  },
+  {
+   "start": 58.44,
+   "end": 58.74,
+   "word": "football",
+   "caption": "football",
+   "p": 0.996
+  },
+  {
+   "start": 58.74,
+   "end": 59.06,
+   "word": "content",
+   "caption": "content",
+   "p": 1.0
+  },
+  {
+   "start": 59.06,
+   "end": 59.2,
+   "word": "on",
+   "caption": "on",
+   "p": 1.0
+  },
+  {
+   "start": 59.2,
+   "end": 59.3,
+   "word": "the",
+   "caption": "the",
+   "p": 0.997
+  },
+  {
+   "start": 59.3,
+   "end": 59.48,
+   "word": "account",
+   "caption": "account",
+   "p": 0.999
+  },
+  {
+   "start": 59.48,
+   "end": 59.68,
+   "word": "as",
+   "caption": "as",
+   "p": 0.997
+  },
+  {
+   "start": 59.68,
+   "end": 59.82,
+   "word": "well,",
+   "caption": "well,",
+   "p": 1.0
+  },
+  {
+   "start": 59.88,
+   "end": 60.08,
+   "word": "that's",
+   "caption": "that's",
+   "p": 1.0
+  },
+  {
+   "start": 60.08,
+   "end": 60.2,
+   "word": "just",
+   "caption": "just",
+   "p": 0.998
+  },
+  {
+   "start": 60.2,
+   "end": 60.48,
+   "word": "because",
+   "caption": "because",
+   "p": 1.0
+  },
+  {
+   "start": 60.48,
+   "end": 60.64,
+   "word": "I",
+   "caption": "I",
+   "p": 1.0
+  },
+  {
+   "start": 60.64,
+   "end": 60.8,
+   "word": "really",
+   "caption": "really",
+   "p": 0.999
+  },
+  {
+   "start": 60.8,
+   "end": 60.98,
+   "word": "love",
+   "caption": "love",
+   "p": 0.999
+  },
+  {
+   "start": 60.98,
+   "end": 61.08,
+   "word": "the",
+   "caption": "the",
+   "p": 1.0
+  },
+  {
+   "start": 61.08,
+   "end": 61.34,
+   "word": "game.",
+   "caption": "game.",
+   "p": 0.998
+  },
+  {
+   "start": 61.46,
+   "end": 61.52,
+   "word": "So",
+   "caption": "So",
+   "p": 0.999
+  },
+  {
+   "start": 61.52,
+   "end": 61.8,
+   "word": "ignore",
+   "caption": "ignore",
+   "p": 0.999
+  },
+  {
+   "start": 61.8,
+   "end": 62.08,
+   "word": "that.",
+   "caption": "that.",
+   "p": 1.0
+  },
+  {
+   "start": 62.24,
+   "end": 62.56,
+   "word": "But",
+   "caption": "But",
+   "p": 0.999
+  },
+  {
+   "start": 62.56,
+   "end": 62.78,
+   "word": "anyway,",
+   "caption": "anyway,",
+   "p": 0.999
+  },
+  {
+   "start": 63.06,
+   "end": 63.8,
+   "word": "I'll",
+   "caption": "I'll",
+   "p": 0.998
+  },
+  {
+   "start": 63.8,
+   "end": 63.96,
+   "word": "see",
+   "caption": "see",
+   "p": 1.0
+  },
+  {
+   "start": 63.96,
+   "end": 64.08,
+   "word": "you",
+   "caption": "you",
+   "p": 1.0
+  },
+  {
+   "start": 64.08,
+   "end": 64.22,
+   "word": "guys",
+   "caption": "guys",
+   "p": 1.0
+  },
+  {
+   "start": 64.22,
+   "end": 64.4,
+   "word": "tomorrow.",
+   "caption": "tomorrow.",
+   "p": 1.0
+  }
+ ]
+}
