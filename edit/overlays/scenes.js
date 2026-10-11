@@ -66,9 +66,9 @@ function bob(tl, el, t0, t1, { amp = 7, period = 0.9 } = {}) { wobble(tl, el, t0
 
 const full = (z, cls = '') => div('full ' + cls, $stage(), { zIndex: z });
 
-// ------------------------------------------------------------------ 0 · title
-function title(tl, c) {
-  const wrap = full(40);
+// ------------------------------------------------------------------ 0 · intro (output time) + the notebook cover
+function makeCover(z) {
+  const wrap = full(z);
   gsap.set(wrap, { perspective: 2400 });
   const cover = div('full kraft', wrap, { backgroundColor: '#D7BF96', transformOrigin: '0% 50%' });
   div('', cover, { position: 'absolute', left: '0', top: '0', width: '70px', height: '1920px', background: 'rgba(92,60,38,.55)' });
@@ -89,10 +89,20 @@ function title(tl, c) {
   tape(cover, { x: 250, y: 620, rot: -14, w: 170 });
   tape(cover, { x: 830, y: 1222, rot: -10, w: 170, cls: 'sage' });
   gsap.set(cover, { transformPerspective: 2400, filter: 'brightness(1)' });
+  return { wrap, cover };
+}
+
+function intro(m, c) {          // m = output-time master timeline
+  const { wrap, cover } = makeCover(40);
+  // soft shadow the cover casts on the page underneath while it turns
+  const shade = full(39);
+  shade.style.background = 'linear-gradient(90deg, rgba(26,15,8,.66) 0%, rgba(26,15,8,.34) 48%, rgba(26,15,8,.06) 100%)';
+  m.fromTo(cover, { scale: 1.035 }, { scale: 1, duration: c.settle[1] - c.settle[0], ease: 'power2.out', immediateRender: true }, c.settle[0]);
   const d = c.flip[1] - c.flip[0];
-  tl.to(cover, { rotationY: -100, duration: d, ease: 'power2.in' }, c.flip[0]);
-  tl.to(cover, { filter: 'brightness(0.55)', duration: d, ease: 'power2.in' }, c.flip[0]);
-  tl.set(wrap, { autoAlpha: 0 }, c.flip[1]);
+  m.to(cover, { rotationY: -100, duration: d, ease: 'power2.inOut' }, c.flip[0]);
+  m.to(cover, { filter: 'brightness(0.5)', duration: d, ease: 'power2.in' }, c.flip[0]);
+  m.fromTo(shade, { opacity: 1 }, { opacity: 0, duration: d * 0.8, ease: 'power1.out', immediateRender: true }, c.flip[0] + d * 0.3);
+  m.set([wrap, shade], { autoAlpha: 0 }, c.flip[1]);
 
   // header label that "stays behind" once the cover opens
   const hdr = thing({ x: 540, y: c.y, w: 640, h: 200, rot: -3, z: 12, cls: 'shadow' });
@@ -104,15 +114,15 @@ function title(tl, c) {
   text(hs, 'by Mo', { x: 360, y: 152, size: 52, font: 'Caveat', weight: 700, fill: C.terracotta });
   tape(hdr, { x: 40, y: 8, rot: -28, w: 120 });
   tape(hdr, { x: 600, y: 10, rot: 24, w: 120 });
-  pop(tl, hdr, c.flip[1] - 0.1, { s: 0.6, spin: -6 });
+  pop(m, hdr, c.label_in, { s: 0.7, spin: -5, dur: 0.46, ease: 'back.out(1.4)' });
 
   const hook = thing({ x: 540, y: c.y + 168, w: 860, h: 100, rot: 1.6, z: 12, cls: 'shadow' });
   const hk = div('paper torn', hook, { position: 'absolute', inset: '0', backgroundColor: '#EEF0DC' });
   const ht = htmlText(hk, c.hook, { left: '0', right: '0', top: '16px', textAlign: 'center', font: '700 56px Caveat', color: C.ink });
-  tl.set(hook, { autoAlpha: 1 }, c.hook_in);
-  reveal(tl, ht, c.hook_in, 0.55);
-  out(tl, hdr, c.out, { y: -50 });
-  out(tl, hook, c.out + 0.04, { y: -40 });
+  m.fromTo(hook, { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.25, ease: 'power2.out', immediateRender: false }, c.hook_in - 0.1);
+  reveal(m, ht, c.hook_in, 0.6);
+  out(m, hdr, c.out, { y: -50 });
+  out(m, hook, c.out + 0.04, { y: -40 });
 }
 
 // ------------------------------------------------------------------ 1 · hello + pennant
@@ -477,18 +487,66 @@ function seal(tl, c) {
   return el;
 }
 
-// ------------------------------------------------------------------ 11 · sparkles around Mo
-function sparkles(tl, c) {
-  const spots = [[320, 720, 34], [770, 700, 40], [270, 940, 28], [820, 930, 34], [540, 640, 30], [210, 800, 24], [880, 790, 26], [330, 1160, 22], [770, 1170, 26]];
-  spots.forEach(([x, y, r], i) => {
-    const el = thing({ x, y, w: r * 2 + 20, h: r * 2 + 20, z: 14, cls: 'boil' });
-    const s = svg(el, r * 2 + 20, r * 2 + 20);
-    sparkle(s, r + 10, r + 10, r, { fill: i % 3 ? C.mustard : '#FBF7EE' });
-    const t0 = c.in + i * 0.07;
-    pop(tl, el, t0, { s: 0, dur: 0.3, spin: 45 });
-    tl.to(el, { scale: 0.65, duration: 0.3, yoyo: true, repeat: 3, ease: 'sine.inOut' }, t0 + 0.32);
-    out(tl, el, c.out - 0.2 + i * 0.01, { s: 0.2 });
+// ------------------------------------------------------------------ 11 · treasure chest bursts open on "value"
+function coin(p, cx, cy, r) {
+  sketch(p, 'circle', [cx, cy, r * 2], { fill: C.mustard, fillStyle: 'solid', strokeWidth: 3.5, roughness: 0.9 });
+  sketch(p, 'circle', [cx, cy, r * 1.3], { stroke: '#B07D1E', strokeWidth: 2.5, roughness: 1 });
+  star(p, cx, cy, r * 0.42, { fill: '#B07D1E', sw: 0 });
+}
+
+function chest(tl, c) {
+  const W = 380, H = 380;
+  const el = thing({ x: 540, y: c.y, w: W, h: H, z: 14, cls: 'boil shadow' });
+  const s = svg(el, W, H);
+  const glow = node(s, 'circle', { cx: 190, cy: 196, r: 120, fill: 'rgba(233,180,76,.7)', filter: 'url(#softglow)', opacity: 0 });
+  const rays = g(s);
+  for (let i = 0; i < 14; i++) {
+    const a = (i / 14) * Math.PI * 2;
+    sketch(rays, 'line', [190 + Math.cos(a) * 80, 196 + Math.sin(a) * 80, 190 + Math.cos(a) * 182, 196 + Math.sin(a) * 182],
+      { stroke: C.mustard, strokeWidth: 10, roughness: 0.7 });
+  }
+  gsap.set(rays, { opacity: 0, scale: 0.3, svgOrigin: '190 196' });
+  const inside = g(s, { opacity: 0 });
+  sketch(inside, 'ellipse', [190, 202, 226, 44], { fill: '#3B2416', fillStyle: 'solid', strokeWidth: 3 });
+  [[150, 196], [178, 190], [206, 194], [232, 198], [166, 204], [196, 206]].forEach(([x, y]) => coin(inside, x, y, 13));
+  sketch(s, 'rectangle', [78, 200, 224, 136], { fill: '#8A5A3B', fillStyle: 'hachure', hachureGap: 7, fillWeight: 3, strokeWidth: 5 });
+  sketch(s, 'rectangle', [118, 200, 24, 136], { fill: '#A3A39C', fillStyle: 'solid', strokeWidth: 3 });
+  sketch(s, 'rectangle', [238, 200, 24, 136], { fill: '#A3A39C', fillStyle: 'solid', strokeWidth: 3 });
+  sketch(s, 'rectangle', [170, 222, 40, 48], { fill: C.mustard, fillStyle: 'solid', strokeWidth: 3.5 });
+  sketch(s, 'circle', [190, 240, 10], { fill: C.ink, fillStyle: 'solid', strokeWidth: 1 });
+  sketch(s, 'line', [190, 242, 190, 258], { strokeWidth: 4 });
+  const lid = g(s);
+  sketch(lid, 'path', ['M78,202 L78,160 Q190,100 302,160 L302,202 Z'], { fill: '#9A6644', fillStyle: 'hachure', hachureGap: 7, fillWeight: 3, strokeWidth: 5 });
+  sketch(lid, 'path', ['M118,202 L118,140 Q130,134 142,131 L142,202 Z'], { fill: '#A3A39C', fillStyle: 'solid', strokeWidth: 3 });
+  sketch(lid, 'path', ['M238,202 L238,131 Q250,134 262,140 L262,202 Z'], { fill: '#A3A39C', fillStyle: 'solid', strokeWidth: 3 });
+  gsap.set(lid, { svgOrigin: '78 160' });
+
+  // drop in, land with a thump
+  tl.fromTo(el, { autoAlpha: 1, y: -440, rotation: -10 }, { y: 0, rotation: 0, duration: c.land - c.in, ease: 'power2.in', immediateRender: false }, c.in);
+  tl.to(el, { scaleX: 1.1, scaleY: 0.87, duration: 0.06, yoyo: true, repeat: 1, ease: 'sine.inOut' }, c.land);
+  const puff = thing({ x: 540, y: c.y + 130, w: 520, h: 160, z: 13 });
+  const ps = svg(puff, 520, 160);
+  for (const [x1, x2] of [[150, 70], [130, 40], [370, 450], [390, 480]]) sketch(ps, 'line', [x1, 120, x2, 100 + (x1 % 3) * 10], { strokeWidth: 5, stroke: C.inkSoft });
+  tl.fromTo(puff, { autoAlpha: 1, scale: 0.7 }, { autoAlpha: 0, scale: 1.15, duration: 0.35, ease: 'power2.out', immediateRender: false }, c.land);
+  // it rattles…
+  wobble(tl, el, c.shake, c.open - 0.04, { amp: 5, period: 0.11 });
+  // …and bursts open on "value"
+  tl.to(lid, { rotation: -42, y: -26, duration: 0.18, ease: 'back.out(2.4)' }, c.open);
+  tl.set(inside, { opacity: 1 }, c.open);
+  tl.to(rays, { opacity: 1, scale: 1, duration: 0.24, ease: 'back.out(2)' }, c.open);
+  tl.to(rays, { rotation: 24, duration: c.out - c.open, ease: 'none', svgOrigin: '190 196' }, c.open);
+  tl.to(glow, { opacity: 1, duration: 0.2 }, c.open);
+  tl.to(glow, { attr: { r: 150 }, duration: 0.3, yoyo: true, repeat: 2, ease: 'sine.inOut' }, c.open + 0.2);
+  const coins = [[-210, -230], [-120, -300], [-40, -340], [60, -320], [150, -280], [230, -210]].map(([dx, dy], i) => {
+    const k = thing({ x: 540, y: c.y + 10, w: 60, h: 60, z: 15, cls: 'boil' });
+    coin(svg(k, 60, 60), 30, 30, 22);
+    const t0 = c.open + 0.02 + i * 0.035;
+    tl.fromTo(k, { autoAlpha: 1, x: 0, y: 0, scale: 0.6, rotation: 0 }, { x: dx * 0.7, y: dy, scale: 1, rotation: (i % 2 ? 1 : -1) * 200, duration: 0.42, ease: 'power2.out', immediateRender: false }, t0);
+    tl.to(k, { x: dx, y: dy + 220, rotation: `+=${(i % 2 ? 1 : -1) * 160}`, duration: 0.45, ease: 'power2.in' }, t0 + 0.42);
+    tl.to(k, { autoAlpha: 0, duration: 0.12 }, t0 + 0.75);
+    return k;
   });
+  out(tl, el, c.out - 0.22, { y: -30 });
 }
 
 // ------------------------------------------------------------------ 12 · envelope "for you"
@@ -727,20 +785,28 @@ function soccer(tl, c) {
   out(tl, el, c.out - 0.24, { x: 260 });
 }
 
-// ------------------------------------------------------------------ 19 · outro pages + bye
+// ------------------------------------------------------------------ 19 · outro: pages close, cover shuts, sticky note
 function outro(tl, c) {
+  const W = 560, shift = 315, closeDur = c.close[1] - c.close[0];
   const mkPage = (side) => {
-    const el = div('paper', $stage(), { position: 'absolute', top: '0', width: '230px', height: '1920px', zIndex: 18,
-      [side]: '0', boxShadow: side === 'left' ? '10px 0 24px rgba(40,25,10,.35)' : '-10px 0 24px rgba(40,25,10,.35)' });
-    const s = svg(el, 230, 1920);
-    for (let y = 120; y < 1920; y += 64) node(s, 'line', { x1: 0, y1: y, x2: 230, y2: y, stroke: 'rgba(93,122,153,.32)', 'stroke-width': 2 });
-    node(s, 'line', { x1: side === 'left' ? 190 : 40, y1: 0, x2: side === 'left' ? 190 : 40, y2: 1920, stroke: 'rgba(192,57,43,.45)', 'stroke-width': 3 });
+    const left = side === 'left';
+    const el = div('paper', $stage(), { position: 'absolute', top: '0', width: `${W}px`, height: '1920px', zIndex: 18,
+      left: left ? `${230 - W}px` : '850px', boxShadow: left ? '10px 0 24px rgba(40,25,10,.35)' : '-10px 0 24px rgba(40,25,10,.35)' });
+    const s = svg(el, W, 1920);
+    for (let y = 120; y < 1920; y += 64) node(s, 'line', { x1: 0, y1: y, x2: W, y2: y, stroke: 'rgba(93,122,153,.32)', 'stroke-width': 2 });
+    node(s, 'line', { x1: left ? W - 40 : 40, y1: 0, x2: left ? W - 40 : 40, y2: 1920, stroke: 'rgba(192,57,43,.45)', 'stroke-width': 3 });
     gsap.set(el, { autoAlpha: 0 });
-    tl.fromTo(el, { autoAlpha: 1, x: side === 'left' ? -250 : 250 }, { x: 0, duration: c.pages[1] - c.pages[0], ease: 'power3.out', immediateRender: false }, c.pages[0]);
+    tl.fromTo(el, { autoAlpha: 1, x: left ? -250 : 250 }, { x: 0, duration: c.pages[1] - c.pages[0], ease: 'power3.out', immediateRender: false }, c.pages[0]);
+    tl.to(el, { x: left ? shift : -shift, duration: closeDur, ease: 'power2.inOut' }, c.close[0]);
     return el;
   };
   mkPage('left');
   mkPage('right');
+  const spine = div('', $stage(), { position: 'absolute', left: '524px', top: '0', width: '32px', height: '1920px', zIndex: 18,
+    background: 'linear-gradient(90deg, rgba(40,25,10,0), rgba(40,25,10,.28), rgba(40,25,10,0))' });
+  gsap.set(spine, { autoAlpha: 0 });
+  tl.to(spine, { autoAlpha: 1, duration: 0.2 }, c.close[1] - 0.15);
+
   const el = thing({ x: 540, y: c.y, w: 660, h: 210, rot: -2, z: 19, cls: 'shadow' });
   const lab = div('paper', el, { position: 'absolute', inset: '0', borderRadius: '16px' });
   const s = svg(lab, 660, 210);
@@ -749,25 +815,46 @@ function outro(tl, c) {
   text(s, c.sub, { x: 330, y: 160, size: 46, font: 'Kalam', weight: 700, fill: C.terracotta });
   tape(el, { x: 330, y: 0, rot: -3, w: 160, cls: 'sage' });
   pop(tl, el, c.title, { s: 0.5 });
+  tl.to(el, { y: c.title_to_y - c.y, scale: 1.12, rotation: 1.5, duration: closeDur, ease: 'power2.inOut' }, c.close[0]);
+
+  // the front cover swings shut over everything, like closing the notebook for the day
+  const { wrap, cover } = makeCover(40);
+  gsap.set(wrap, { autoAlpha: 0 });
+  gsap.set(cover, { rotationY: -100, filter: 'brightness(0.5)' });
+  const coverDur = c.cover[1] - c.cover[0];
+  tl.set(wrap, { autoAlpha: 1 }, c.cover[0]);
+  tl.to(cover, { rotationY: 0, duration: coverDur, ease: 'power2.in' }, c.cover[0]);
+  tl.to(cover, { filter: 'brightness(1)', duration: coverDur, ease: 'power2.in' }, c.cover[0]);
+  tl.to(cover, { scale: 1.012, duration: 0.06, yoyo: true, repeat: 1, ease: 'sine.inOut' }, c.cover[1]);
+
+  const note = thing({ x: 735, y: 1500, w: 360, h: 300, rot: 6, z: 41, cls: 'shadow' });
+  const n = div('', note, { position: 'absolute', inset: '0', background: C.sticky, borderRadius: '2px 2px 18px 2px',
+    backgroundImage: 'url(img/paper.png)', backgroundBlendMode: 'multiply' });
+  htmlText(n, c.note_text, { left: '0', right: '0', top: '78px', textAlign: 'center', font: '700 70px Caveat', color: C.ink, whiteSpace: 'normal', lineHeight: '66px' });
+  tape(note, { x: 180, y: 0, rot: -4, w: 150, cls: 'blue' });
+  slap(tl, note, c.note);
 }
 
-function claudeBye(tl, c) {
+function claudeBye(tl, c, o) {
   const { el, parts } = makeClaude(c.x, c.y, 60, 20);
   const shoulder = `${el.offsetWidth / 2 + 55} ${el.offsetHeight / 2 + 6}`;
   gsap.set(parts.armR, { svgOrigin: shoulder });
   tl.fromTo(el, { autoAlpha: 1, x: -260, rotation: -25 }, { x: 0, rotation: 0, duration: 0.26, ease: 'back.out(2)', immediateRender: false }, c.in);
-  wobble(tl, parts.armR, c.in + 0.2, 64.95, { amp: 30, period: 0.26, vars: { svgOrigin: shoulder } });
+  wobble(tl, parts.armR, c.in + 0.2, o.cover[0], { amp: 30, period: 0.26, vars: { svgOrigin: shoulder } });
   const b = bubble(c.x + 170, c.y - 170, 250, 120, [60, 170]);
   b.el.style.fontSize = '50px';
   b.txt.style.top = '22px';
   tl.fromTo(b.el, { autoAlpha: 0, scale: 0.4 }, { autoAlpha: 1, scale: 1, duration: 0.16, ease: 'back.out(2)', immediateRender: false }, c.bubble - 0.04);
   typeOn(tl, b.txt, c.text, c.bubble, c.bubble + 0.35);
+  tl.to(b.el, { autoAlpha: 0, scale: 0.8, duration: 0.14 }, c.bubble_out);
+  // rides in with the closing page and keeps waving next to the "see you tomorrow" label
+  tl.to(el, { x: 230, y: -60, duration: o.close[1] - o.close[0], ease: 'power2.inOut' }, o.close[0]);
 }
 
 // ------------------------------------------------------------------ build all
-export function buildScenes(tl, beats) {
+export function buildScenes(tl, master, beats) {
   const c = beats.cues;
-  title(tl, c.title);
+  intro(master, c.intro);
   hello(tl, c.hello);
   pennant(tl, c.pennant);
   chapter(tl, c.chapter);
@@ -783,7 +870,7 @@ export function buildScenes(tl, beats) {
   fineprint(tl, c.fineprint);
   const sealEl = seal(tl, c.seal);
   bridgeFixed(tl, c.bridge_fixed, c.bridge_broken, sealEl);
-  sparkles(tl, c.sparkles);
+  chest(tl, c.chest);
   envelope(tl, c.envelope);
   calendar(tl, c.calendar);
   words(tl, c.words);
@@ -792,5 +879,5 @@ export function buildScenes(tl, beats) {
   follow(tl, c.follow);
   soccer(tl, c.soccer);
   outro(tl, c.outro);
-  claudeBye(tl, c.claude_bye);
+  claudeBye(tl, c.claude_bye, c.outro);
 }

@@ -21,7 +21,7 @@ export function chunkWords(words, cfg, duration) {
   }
   if (cur.length) groups.push(cur);
   return groups.map((ws, i) => {
-    const tin = ws[0].start - 0.04;
+    const tin = Math.max(0, ws[0].start - 0.04);
     const next = groups[i + 1];
     const natural = Math.max(ws[ws.length - 1].end + cfg.hold_after, tin + 0.5);
     const tout = Math.min(natural, next ? next[0].start - 0.04 : duration);

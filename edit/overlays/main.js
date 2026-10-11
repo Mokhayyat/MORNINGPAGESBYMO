@@ -16,16 +16,21 @@ async function boot() {
   await Promise.all([...document.fonts].map((f) => f.load().catch(() => null)));
 
   setPalette(beats.palette);
-  const tl = gsap.timeline({ paused: true });
-  buildScenes(tl, beats);
+  const P = beats.meta.preroll || 0, Q = beats.meta.postroll || 0, D = beats.meta.duration;
+  // master = output time; tl = source time, nested at the pre-roll offset (first frame held under the cover)
+  const master = gsap.timeline({ paused: true });
+  const tl = gsap.timeline();
+  master.add(tl, P);
+  buildScenes(tl, master, beats);
   buildCaptions(tl, beats, transcript);
-  tl.set({}, {}, beats.meta.duration);
+  tl.set({}, {}, D + Q);
+  master.set({}, {}, P + D + Q);
 
-  window.__timeline = tl;
-  window.__duration = beats.meta.duration;
+  window.__timeline = master;
+  window.__duration = P + D + Q;
   window.__fps = beats.meta.fps;
   window.__seek = (t) => {
-    tl.time(t, false);
+    master.time(t, false);
     const n = Math.floor(t * 12 + 1e-6);                 // line boil + film dust at 12 fps ("on twos")
     const b = document.body.classList;
     b.remove('b0', 'b1', 'b2', 'd0', 'd1');

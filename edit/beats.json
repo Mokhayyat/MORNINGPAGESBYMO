@@ -5,7 +5,9 @@
     "fps": 30,
     "duration": 64.95,
     "size": [1080, 1920],
-    "notes": "All times in seconds on the uncut source timeline (no cuts). Positions are px on the 1080x1920 output. Visual pops lead their word by ~1 frame."
+    "preroll": 0.9,
+    "postroll": 1.8,
+    "notes": "All times are seconds on the uncut source timeline (no cuts), except cues.intro, which is in output time. Output = preroll (first frame held under the opening cover) + duration + postroll (last frame held while the pages and cover close). Positions are px on the 1080x1920 output. Visual pops lead their word by ~1 frame."
   },
 
   "zones": {
@@ -53,7 +55,7 @@
   },
 
   "cues": {
-    "title":        { "flip": [0.10, 0.62], "hook_in": 0.72, "out": 2.95, "y": 380,
+    "intro":        { "_time": "output", "settle": [0.0, 0.32], "flip": [0.32, 1.24], "label_in": 1.06, "hook_in": 1.34, "out": 3.85, "y": 380,
                       "name": "MORNING PAGES", "by": "by Mo", "hook": "a history story every morning ☀️📜" },
     "hello":        { "in": 3.36, "out": 6.95, "x": 180, "y": 870, "rot": -7, "name": "Mo" },
     "pennant":      { "in": 4.18, "out": 7.0, "x": 900, "y": 820, "rot": 8, "text": "PENN", "note": "freshman!" },
@@ -81,7 +83,7 @@
     "fineprint":    { "in": 27.7, "snip": 28.36, "out": 29.7, "x": 880, "y": 900 },
     "seal":         { "t": 31.6, "y": 470 },
     "bridge_fixed": { "in": 32.7, "draw": [33.12, 33.95], "check": 34.1, "out": 34.75 },
-    "sparkles":     { "in": 34.9, "out": 36.95 },
+    "chest":        { "in": 34.86, "land": 35.05, "shake": 35.5, "open": 36.0, "out": 36.95, "y": 430 },
     "envelope":     { "in": 37.5, "open": 38.76, "out": 39.2, "x": 860, "y": 840 },
     "calendar":     { "in": 39.0, "rips": [39.18, 39.4, 39.62], "today": 40.34, "new": 41.96, "out": 43.25, "y": 470 },
     "words":        { "items": [
@@ -99,13 +101,16 @@
     "follow":       { "in": 55.95, "out": 57.6, "y": 430, "text": "follow for tomorrow's story ☀️" },
     "soccer":       { "in": 58.4, "bounces": [58.75, 59.3, 59.85, 60.4], "hearts": 60.78, "sticky": 61.5, "out": 62.3,
                       "x": 890, "y": 860, "note": "(ignore this 🙈)" },
-    "outro":        { "pages": [62.25, 63.2], "title": 63.75, "y": 380, "text": "see you tomorrow ☀️", "sub": "Morning Pages · by Mo" },
-    "claude_bye":   { "in": 63.88, "bubble": 64.05, "x": 150, "y": 1080, "text": "bye!! 👋" }
+    "outro":        { "pages": [62.25, 63.2], "title": 63.75, "y": 380, "text": "see you tomorrow ☀️", "sub": "Morning Pages · by Mo",
+                      "close": [64.5, 65.25], "title_to_y": 860, "cover": [65.4, 66.05], "note": 66.2, "note_text": "see you tomorrow ☀️" },
+    "claude_bye":   { "in": 63.88, "bubble": 64.05, "bubble_out": 64.45, "x": 150, "y": 1080, "text": "bye!! 👋" }
   },
 
   "sfx": [
-    { "t": 0.08,  "s": "k:rpg/bookFlip2",              "db": -6 },
-    { "t": 0.74,  "s": "synth:scribble",               "db": -16 },
+    { "t": -0.86, "s": "k:rpg/cloth1",                 "db": -20 },
+    { "t": -0.56, "s": "k:rpg/bookFlip2",              "db": -7 },
+    { "t": -0.3,  "s": "synth:whoosh",                 "db": -20 },
+    { "t": 0.44,  "s": "synth:scribble",               "db": -16 },
     { "t": 3.34,  "s": "synth:slap",                   "db": -8 },
     { "t": 4.16,  "s": "synth:whoosh",                 "db": -16 },
     { "t": 4.3,   "s": "k:rpg/cloth1",                 "db": -16 },
@@ -145,7 +150,12 @@
     { "t": 31.6,  "s": "synth:thud",                   "db": -8 },
     { "t": 33.12, "s": "synth:scribble",               "db": -16 },
     { "t": 34.1,  "s": "k:interface/confirmation_001", "db": -11 },
-    { "t": 34.9,  "s": "synth:shimmer",                "db": -15 },
+    { "t": 34.86, "s": "synth:whoosh",                 "db": -18 },
+    { "t": 35.05, "s": "k:impact/impactWood_heavy_001", "db": -6 },
+    { "t": 35.52, "s": "k:rpg/metalLatch",             "db": -11 },
+    { "t": 35.92, "s": "k:rpg/creak2",                 "db": -12 },
+    { "t": 36.02, "s": "k:rpg/handleCoins",            "db": -6 },
+    { "t": 36.32, "s": "k:rpg/handleCoins2",           "db": -10 },
     { "t": 37.5,  "s": "k:rpg/cloth2",                 "db": -12 },
     { "t": 38.76, "s": "synth:pop",                    "db": -10 },
     { "t": 39.18, "s": "synth:rip",                    "db": -10 },
@@ -179,7 +189,12 @@
     { "t": 63.75, "s": "synth:chime",                  "db": -14 },
     { "t": 63.88, "s": "synth:pop_cute",               "db": -11 },
     { "t": 64.05, "s": "synth:type_boops:8:0.4",       "db": -19 },
-    { "t": 64.55, "s": "k:rpg/bookClose",              "db": -8 }
+    { "t": 64.5,  "s": "k:rpg/cloth3",                 "db": -13 },
+    { "t": 65.2,  "s": "k:rpg/bookPlace2",             "db": -12 },
+    { "t": 65.42, "s": "synth:whoosh",                 "db": -18 },
+    { "t": 66.03, "s": "k:rpg/bookClose",              "db": -5 },
+    { "t": 66.2,  "s": "synth:slap",                   "db": -11 },
+    { "t": 66.24, "s": "synth:chime",                  "db": -15 }
   ],
 
   "music": {

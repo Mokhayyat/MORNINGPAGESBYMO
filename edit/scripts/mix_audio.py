@@ -1,5 +1,8 @@
 """Final audio mix: clean voice + original lo-fi bed (ducked under the voice) + timed sound effects.
 
+The mix is in output time: voice and SFX are shifted by meta.preroll and the mix runs to the end of
+meta.postroll. The music file must already be in output time (see output_timeline.py).
+
 Usage:
   python -I mix_audio.py <beats.json> <voice_clean.wav> <music.wav> <sfx_dir> <kenney_dir> <out.wav> [--from S --to S]
 
@@ -75,11 +78,13 @@ def true_peak_limit(x, ceiling_db=-1.5):
 def main():
     beats_p, voice_p, music_p, sfx_dir, kenney_dir, out_p = sys.argv[1:7]
     beats = json.load(open(beats_p))
-    dur = beats["meta"]["duration"]
+    pre, post = beats["meta"].get("preroll", 0), beats["meta"].get("postroll", 0)
+    dur = pre + beats["meta"]["duration"] + post
     n = int(round(dur * SR))
+    i_pre = int(round(pre * SR))
     meter = pyln.Meter(SR)
 
-    voice = load(voice_p, mono=True)[:n]
+    voice = np.concatenate([np.zeros(i_pre), load(voice_p, mono=True)])[:n]
     voice = np.pad(voice, (0, n - len(voice)))
     voice *= db(-16.0 - meter.integrated_loudness(voice))             # voice stem at -16 LUFS
 
@@ -101,8 +106,8 @@ def main():
             missing.append(e["s"])
             continue
         clip = clip / (np.abs(clip).max() + 1e-9) * db(-6.0) * db(e["db"])
-        i = int(round(e["t"] * SR))
-        if i >= n:
+        i = int(round((e["t"] + pre) * SR))
+        if i >= n or i < 0:
             continue
         seg = clip[: n - i]
         sfx[i:i + len(seg)] += seg
