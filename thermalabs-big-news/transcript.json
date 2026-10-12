@@ -1,0 +1,546 @@
+{
+ "duration": 21.103,
+ "source": "align_words.py (wav2vec2 base 960h CTC)",
+ "words": [
+  {
+   "start": 0.42,
+   "end": 0.48,
+   "word": "Yo,",
+   "whisper_start": 0.0,
+   "conf": 0.287
+  },
+  {
+   "start": 0.781,
+   "end": 1.181,
+   "word": "massive",
+   "whisper_start": 0.8,
+   "conf": 0.978
+  },
+  {
+   "start": 1.261,
+   "end": 1.501,
+   "word": "moment",
+   "whisper_start": 1.12,
+   "conf": 0.967
+  },
+  {
+   "start": 1.541,
+   "end": 1.621,
+   "word": "for",
+   "whisper_start": 1.46,
+   "conf": 0.762
+  },
+  {
+   "start": 1.641,
+   "end": 2.082,
+   "word": "ThermaLabs.",
+   "whisper_start": 1.6,
+   "conf": 0.65
+  },
+  {
+   "start": 2.102,
+   "end": 2.222,
+   "word": "We're",
+   "whisper_start": 2.18,
+   "conf": 0.89
+  },
+  {
+   "start": 2.242,
+   "end": 2.382,
+   "word": "about",
+   "whisper_start": 2.22,
+   "conf": 0.954
+  },
+  {
+   "start": 2.402,
+   "end": 2.462,
+   "word": "to",
+   "whisper_start": 2.34,
+   "conf": 0.856
+  },
+  {
+   "start": 2.482,
+   "end": 2.562,
+   "word": "get",
+   "whisper_start": 2.44,
+   "conf": 0.952
+  },
+  {
+   "start": 2.602,
+   "end": 2.642,
+   "word": "a",
+   "whisper_start": 2.54,
+   "conf": 0.796
+  },
+  {
+   "start": 2.802,
+   "end": 3.282,
+   "word": "crazy",
+   "whisper_start": 2.66,
+   "conf": 0.996
+  },
+  {
+   "start": 3.403,
+   "end": 3.683,
+   "word": "upgrade.",
+   "whisper_start": 3.14,
+   "conf": 0.772
+  },
+  {
+   "start": 3.983,
+   "end": 4.103,
+   "word": "We're",
+   "whisper_start": 3.8,
+   "conf": 0.887
+  },
+  {
+   "start": 4.123,
+   "end": 4.283,
+   "word": "about",
+   "whisper_start": 4.1,
+   "conf": 0.997
+  },
+  {
+   "start": 4.303,
+   "end": 4.383,
+   "word": "to",
+   "whisper_start": 4.22,
+   "conf": 0.983
+  },
+  {
+   "start": 4.463,
+   "end": 4.703,
+   "word": "sign",
+   "whisper_start": 4.36,
+   "conf": 0.991
+  },
+  {
+   "start": 4.804,
+   "end": 4.884,
+   "word": "our",
+   "whisper_start": 4.68,
+   "conf": 0.999
+  },
+  {
+   "start": 4.944,
+   "end": 5.024,
+   "word": "new",
+   "whisper_start": 4.86,
+   "conf": 0.995
+  },
+  {
+   "start": 5.084,
+   "end": 5.384,
+   "word": "technical",
+   "whisper_start": 5.0,
+   "conf": 0.99
+  },
+  {
+   "start": 5.504,
+   "end": 5.784,
+   "word": "expert,",
+   "whisper_start": 5.3,
+   "conf": 0.995
+  },
+  {
+   "start": 5.904,
+   "end": 6.044,
+   "word": "who's",
+   "whisper_start": 5.78,
+   "conf": 0.861
+  },
+  {
+   "start": 6.145,
+   "end": 6.165,
+   "word": "a",
+   "whisper_start": 6.06,
+   "conf": 0.995
+  },
+  {
+   "start": 6.305,
+   "end": 6.605,
+   "word": "leading",
+   "whisper_start": 6.18,
+   "conf": 0.972
+  },
+  {
+   "start": 6.665,
+   "end": 7.125,
+   "word": "researcher",
+   "whisper_start": 6.54,
+   "conf": 0.891
+  },
+  {
+   "start": 7.225,
+   "end": 7.265,
+   "word": "in",
+   "whisper_start": 7.02,
+   "conf": 0.877
+  },
+  {
+   "start": 7.345,
+   "end": 7.586,
+   "word": "cooling",
+   "whisper_start": 7.28,
+   "conf": 0.957
+  },
+  {
+   "start": 7.626,
+   "end": 7.846,
+   "word": "jacket",
+   "whisper_start": 7.5,
+   "conf": 0.787
+  },
+  {
+   "start": 7.866,
+   "end": 8.286,
+   "word": "technology",
+   "whisper_start": 7.78,
+   "conf": 0.823
+  },
+  {
+   "start": 8.686,
+   "end": 8.947,
+   "word": "across",
+   "whisper_start": 8.24,
+   "conf": 0.99
+  },
+  {
+   "start": 8.987,
+   "end": 9.067,
+   "word": "the",
+   "whisper_start": 8.86,
+   "conf": 0.888
+  },
+  {
+   "start": 9.107,
+   "end": 9.327,
+   "word": "world.",
+   "whisper_start": 9.04,
+   "conf": 0.961
+  },
+  {
+   "start": 9.707,
+   "end": 9.787,
+   "word": "So",
+   "whisper_start": 9.48,
+   "conf": 0.985
+  },
+  {
+   "start": 9.867,
+   "end": 10.067,
+   "word": "stay",
+   "whisper_start": 9.78,
+   "conf": 0.822
+  },
+  {
+   "start": 10.127,
+   "end": 10.408,
+   "word": "tuned,",
+   "whisper_start": 10.02,
+   "conf": 0.646
+  },
+  {
+   "start": 10.468,
+   "end": 10.628,
+   "word": "more",
+   "whisper_start": 10.44,
+   "conf": 0.889
+  },
+  {
+   "start": 10.668,
+   "end": 10.908,
+   "word": "updates",
+   "whisper_start": 10.58,
+   "conf": 0.375
+  },
+  {
+   "start": 10.948,
+   "end": 10.988,
+   "word": "on",
+   "whisper_start": 10.86,
+   "conf": 0.7
+  },
+  {
+   "start": 11.028,
+   "end": 11.128,
+   "word": "that",
+   "whisper_start": 11.0,
+   "conf": 0.166
+  },
+  {
+   "start": 11.168,
+   "end": 11.208,
+   "word": "in",
+   "whisper_start": 11.12,
+   "conf": 0.561
+  },
+  {
+   "start": 11.228,
+   "end": 11.288,
+   "word": "the",
+   "whisper_start": 11.2,
+   "conf": 0.806
+  },
+  {
+   "start": 11.328,
+   "end": 11.528,
+   "word": "coming",
+   "whisper_start": 11.28,
+   "conf": 0.979
+  },
+  {
+   "start": 11.548,
+   "end": 11.769,
+   "word": "days.",
+   "whisper_start": 11.44,
+   "conf": 0.989
+  },
+  {
+   "start": 12.529,
+   "end": 12.709,
+   "word": "Other",
+   "whisper_start": 12.44,
+   "conf": 0.983
+  },
+  {
+   "start": 12.749,
+   "end": 12.849,
+   "word": "than",
+   "whisper_start": 12.66,
+   "conf": 0.995
+  },
+  {
+   "start": 12.93,
+   "end": 13.11,
+   "word": "that,",
+   "whisper_start": 12.8,
+   "conf": 0.99
+  },
+  {
+   "start": 13.31,
+   "end": 13.61,
+   "word": "massive",
+   "whisper_start": 13.24,
+   "conf": 0.961
+  },
+  {
+   "start": 13.65,
+   "end": 13.81,
+   "word": "thank",
+   "whisper_start": 13.56,
+   "conf": 0.993
+  },
+  {
+   "start": 13.87,
+   "end": 13.97,
+   "word": "you",
+   "whisper_start": 13.76,
+   "conf": 0.986
+  },
+  {
+   "start": 14.05,
+   "end": 14.13,
+   "word": "to",
+   "whisper_start": 13.96,
+   "conf": 0.999
+  },
+  {
+   "start": 14.25,
+   "end": 14.551,
+   "word": "everyone",
+   "whisper_start": 14.12,
+   "conf": 0.99
+  },
+  {
+   "start": 14.571,
+   "end": 14.631,
+   "word": "who",
+   "whisper_start": 14.46,
+   "conf": 0.998
+  },
+  {
+   "start": 14.691,
+   "end": 14.911,
+   "word": "started",
+   "whisper_start": 14.62,
+   "conf": 0.977
+  },
+  {
+   "start": 14.951,
+   "end": 15.051,
+   "word": "their",
+   "whisper_start": 14.84,
+   "conf": 0.954
+  },
+  {
+   "start": 15.111,
+   "end": 15.551,
+   "word": "application",
+   "whisper_start": 15.02,
+   "conf": 0.987
+  },
+  {
+   "start": 15.631,
+   "end": 16.052,
+   "word": "process",
+   "whisper_start": 15.46,
+   "conf": 0.962
+  },
+  {
+   "start": 16.132,
+   "end": 16.212,
+   "word": "and",
+   "whisper_start": 15.92,
+   "conf": 0.996
+  },
+  {
+   "start": 16.272,
+   "end": 16.552,
+   "word": "everyone",
+   "whisper_start": 16.2,
+   "conf": 0.95
+  },
+  {
+   "start": 16.592,
+   "end": 16.692,
+   "word": "else",
+   "whisper_start": 16.48,
+   "conf": 1.0
+  },
+  {
+   "start": 16.712,
+   "end": 16.812,
+   "word": "who's",
+   "whisper_start": 16.68,
+   "conf": 0.431
+  },
+  {
+   "start": 16.852,
+   "end": 16.952,
+   "word": "just",
+   "whisper_start": 16.82,
+   "conf": 0.614
+  },
+  {
+   "start": 16.972,
+   "end": 17.073,
+   "word": "been",
+   "whisper_start": 16.92,
+   "conf": 0.969
+  },
+  {
+   "start": 17.093,
+   "end": 17.333,
+   "word": "following",
+   "whisper_start": 17.02,
+   "conf": 0.986
+  },
+  {
+   "start": 17.373,
+   "end": 17.453,
+   "word": "our",
+   "whisper_start": 17.26,
+   "conf": 0.95
+  },
+  {
+   "start": 17.493,
+   "end": 17.733,
+   "word": "journey.",
+   "whisper_start": 17.42,
+   "conf": 0.968
+  },
+  {
+   "start": 18.1,
+   "end": 18.16,
+   "word": "It",
+   "whisper_start": 18.2,
+   "conf": 0.0,
+   "note": "moved by hand: aligner had no evidence (conf 0)"
+  },
+  {
+   "start": 18.173,
+   "end": 18.353,
+   "word": "means",
+   "whisper_start": 18.2,
+   "conf": 0.984
+  },
+  {
+   "start": 18.394,
+   "end": 18.474,
+   "word": "the",
+   "whisper_start": 18.3,
+   "conf": 0.98
+  },
+  {
+   "start": 18.514,
+   "end": 18.714,
+   "word": "world",
+   "whisper_start": 18.44,
+   "conf": 0.984
+  },
+  {
+   "start": 18.754,
+   "end": 18.814,
+   "word": "to",
+   "whisper_start": 18.66,
+   "conf": 0.969
+  },
+  {
+   "start": 18.874,
+   "end": 18.954,
+   "word": "me.",
+   "whisper_start": 18.82,
+   "conf": 0.999
+  },
+  {
+   "start": 19.434,
+   "end": 19.614,
+   "word": "Let's",
+   "whisper_start": 19.2,
+   "conf": 0.983
+  },
+  {
+   "start": 19.634,
+   "end": 19.714,
+   "word": "go,",
+   "whisper_start": 19.6,
+   "conf": 1.0
+  },
+  {
+   "start": 19.835,
+   "end": 20.055,
+   "word": "baby.",
+   "whisper_start": 19.82,
+   "conf": 0.994
+  },
+  {
+   "start": 20.215,
+   "end": 20.395,
+   "word": "Let's",
+   "whisper_start": 20.16,
+   "conf": 0.962
+  },
+  {
+   "start": 20.415,
+   "end": 20.555,
+   "word": "keep",
+   "whisper_start": 20.38,
+   "conf": 1.0
+  },
+  {
+   "start": 20.635,
+   "end": 20.675,
+   "word": "it",
+   "whisper_start": 20.52,
+   "conf": 0.985
+  },
+  {
+   "start": 20.755,
+   "end": 20.975,
+   "word": "icy.",
+   "whisper_start": 20.68,
+   "conf": 0.335
+  }
+ ]
+}
