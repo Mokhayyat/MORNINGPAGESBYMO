@@ -9,3 +9,6 @@ edit/build/
 edit/node_modules/
 __pycache__/
 *.pyc
+
+# ThermaLabs reel edit
+thermalabs-big-news/node_modules/

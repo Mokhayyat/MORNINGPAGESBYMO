@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ThermaLabs big news overlays</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="../node_modules/gsap/dist/gsap.min.js"></script>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <filter id="holo-glow" x="-50%" y="-50%" width="200%" height="200%" color-interpolation-filters="sRGB">
+        <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="rgb(0 224 255)" flood-opacity="0.55" result="near"/>
+        <feDropShadow in="near" dx="0" dy="0" stdDeviation="10" flood-color="rgb(0 224 255)" flood-opacity="0.25"/>
+      </filter>
+      <filter id="crack-glow" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+        <feGaussianBlur stdDeviation="4"/>
+      </filter>
+    </defs>
+  </svg>
+  <div id="stage"></div>
+  <script type="module" src="main.js"></script>
+</body>
+</html>

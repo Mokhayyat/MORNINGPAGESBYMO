@@ -1,0 +1,193 @@
+/* ThermaLabs reel overlays: the house look of the BREEZE challenge reels (dark glass cards, cyan accents,
+   Unbounded for the loud words, Inter for everything else), on a transparent 1080x1920 stage. */
+@font-face { font-family: Inter; font-weight: 500; src: url(../node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2) format("woff2"); }
+@font-face { font-family: Inter; font-weight: 600; src: url(../node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2) format("woff2"); }
+@font-face { font-family: Inter; font-weight: 700; src: url(../node_modules/@fontsource/inter/files/inter-latin-700-normal.woff2) format("woff2"); }
+@font-face { font-family: Inter; font-weight: 800; src: url(../node_modules/@fontsource/inter/files/inter-latin-800-normal.woff2) format("woff2"); }
+@font-face { font-family: Unbounded; font-weight: 700; src: url(../node_modules/@fontsource/unbounded/files/unbounded-latin-700-normal.woff2) format("woff2"); }
+@font-face { font-family: Unbounded; font-weight: 800; src: url(../node_modules/@fontsource/unbounded/files/unbounded-latin-800-normal.woff2) format("woff2"); }
+@font-face { font-family: Unbounded; font-weight: 900; src: url(../node_modules/@fontsource/unbounded/files/unbounded-latin-900-normal.woff2) format("woff2"); }
+
+:root {
+  --cyan: #00E0FF;
+  --cyan-hi: #7FF3FF;
+  --red: #F0453A;
+  --ink: #FFFFFF;
+  --ink2: #B8BCC2;
+  --muted: #7A7F87;
+  --card: rgba(14, 15, 18, 0.86);
+  --hair: rgba(255, 255, 255, 0.10);
+  --on-cyan: #001014;
+}
+
+html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+body { font-family: Inter, sans-serif; color: var(--ink); -webkit-font-smoothing: antialiased; }
+body.preview { background: #3a3f46; }
+#stage { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; }
+.abs { position: absolute; left: 0; top: 0; }
+svg { display: block; }
+
+/* ---------- hook ---------- */
+.glow {
+  position: absolute; inset: 0; z-index: 1; opacity: 0;
+  background: radial-gradient(ellipse 78% 70% at 50% 44%, rgba(240, 69, 58, 0) 62%, rgba(240, 69, 58, 0.30) 86%, rgba(240, 52, 40, 0.62) 100%);
+  box-shadow: inset 0 0 120px 18px rgba(240, 58, 44, 0.80);
+}
+.sticker {
+  z-index: 35; padding: 18px 34px 22px; border: 8px solid #fff; border-radius: 28px;
+  background: var(--red); color: #fff; white-space: nowrap;
+  font: 900 92px/1 Unbounded, sans-serif; letter-spacing: -0.01em;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35), 0 2px 0 rgba(0, 0, 0, 0.12);
+  transform-origin: 50% 50%;
+}
+.tape {
+  z-index: 5; width: 1180px; height: 84px; display: flex; align-items: stretch;
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.30));
+}
+.tape .hz { width: 128px; flex: none; background: repeating-linear-gradient(-45deg, #F5C518 0 20px, #121212 20px 40px); }
+.tape .tb {
+  flex: 1; background: var(--red); display: flex; align-items: center; justify-content: center; gap: 22px;
+  font: 700 36px/1 Unbounded, sans-serif; letter-spacing: 0.09em; color: #fff; white-space: nowrap;
+}
+.tape .tb svg { width: 38px; height: 38px; }
+
+/* ---------- glass cards ---------- */
+.card {
+  z-index: 12; background: var(--card); border: 1.5px solid var(--hair); border-radius: 26px;
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.32);
+}
+.micro { font: 700 22px/1 Inter, sans-serif; letter-spacing: 0.2em; color: var(--ink2); text-transform: uppercase; }
+.upgrade { width: 760px; padding: 26px 32px 24px; box-sizing: border-box; }
+.upgrade .row { display: flex; align-items: center; justify-content: space-between; height: 66px; }
+.upgrade .pct { font: 800 60px/1 Unbounded, sans-serif; color: #fff; font-variant-numeric: tabular-nums; }
+.upgrade .pct small { font-size: 36px; margin-left: 4px; color: var(--ink2); }
+.upgrade .bar { position: relative; height: 14px; border-radius: 7px; background: rgba(255, 255, 255, 0.12); margin-top: 14px; overflow: hidden; }
+.upgrade .bar i {
+  position: absolute; left: 0; top: 0; bottom: 0; width: 0; border-radius: 7px;
+  background: linear-gradient(90deg, #00A9CC, var(--cyan) 70%, var(--cyan-hi));
+  box-shadow: 0 0 18px rgba(0, 224, 255, 0.65);
+}
+.upgrade .bar i::after {
+  content: ""; position: absolute; right: 0; top: -6px; bottom: -6px; width: 26px;
+  background: radial-gradient(closest-side, rgba(200, 250, 255, 0.9), rgba(0, 224, 255, 0));
+}
+.upgrade .foot { display: flex; align-items: center; gap: 12px; margin-top: 18px; font: 600 26px/1 Inter, sans-serif; color: var(--ink2); }
+.upgrade .foot .dot { width: 12px; height: 12px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 12px var(--cyan); }
+.upgrade .foot b { color: #fff; font-weight: 700; }
+.upgrade .guess { display: flex; align-items: center; gap: 12px; margin-top: 16px; padding-top: 16px; border-top: 1.5px solid var(--hair);
+  font: 700 28px/1 Inter, sans-serif; color: #fff; }
+.upgrade .guess em { font-style: normal; color: var(--cyan); }
+.upgrade .guess svg { width: 32px; height: 32px; }
+
+/* ---------- ID badge ---------- */
+.badge-wrap { z-index: 14; width: 262px; transform-origin: 50% -40px; }
+.badge-wrap .clip {
+  position: absolute; left: 50%; top: -30px; width: 54px; height: 40px; margin-left: -27px; border-radius: 9px;
+  background: linear-gradient(#d7dade, #9ea3aa); box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
+}
+.badge-wrap .clip::after { content: ""; position: absolute; left: 12px; right: 12px; top: 8px; height: 8px; border-radius: 4px; background: #6c7178; }
+.badge {
+  position: relative; border-radius: 20px; overflow: hidden; background: #121317; border: 1.5px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 22px 46px rgba(0, 0, 0, 0.45);
+}
+.badge .b-head { position: relative; height: 80px; background: var(--cyan); display: flex; align-items: flex-end; justify-content: center; padding-bottom: 14px; box-sizing: border-box;
+  font: 800 30px/1 Inter, sans-serif; color: var(--on-cyan); letter-spacing: -0.01em; }
+.badge .b-head::before { content: ""; position: absolute; top: 16px; left: 50%; width: 62px; height: 12px; margin-left: -31px; border-radius: 6px; background: rgba(0, 16, 20, 0.28); }
+.badge .b-body { padding: 18px 18px 20px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.badge .avatar { position: relative; width: 104px; height: 104px; border-radius: 50%; background: #1d2026; border: 2px solid rgba(255, 255, 255, 0.10); overflow: hidden; }
+.badge .avatar svg { position: absolute; left: 50%; bottom: -6px; width: 86px; height: 86px; margin-left: -43px; }
+.badge .avatar .q { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  font: 800 62px/1 Unbounded, sans-serif; color: var(--cyan); text-shadow: 0 0 18px rgba(0, 224, 255, 0.8); }
+.badge .redact { width: 180px; height: 26px; border-radius: 5px; background: #000;
+  background-image: repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.06) 0 6px, transparent 6px 12px); }
+.badge .redact.short { width: 132px; height: 20px; opacity: 0.8; margin-top: -4px; }
+.badge .b-title { font: 800 29px/1.05 Inter, sans-serif; color: #fff; text-align: center; letter-spacing: -0.01em; }
+.stamp {
+  z-index: 16; padding: 8px 12px 9px; border: 5px solid var(--red); border-radius: 9px; color: var(--red);
+  font: 800 23px/1 Unbounded, sans-serif; letter-spacing: 0.02em; white-space: nowrap; background: rgba(255, 255, 255, 0.05);
+  -webkit-mask-image: url(assets/stamp_grain.png); mask-image: url(assets/stamp_grain.png);
+  -webkit-mask-size: cover; mask-size: cover; mask-mode: luminance;
+}
+
+/* ---------- chips ---------- */
+.chip {
+  z-index: 12; height: 70px; padding: 0 28px 0 20px; display: flex; align-items: center; gap: 16px; box-sizing: border-box;
+  background: var(--card); border: 1.5px solid var(--hair); border-radius: 20px; box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+  font: 700 28px/1 Unbounded, sans-serif; color: #fff; white-space: nowrap;
+}
+.chip .ic { width: 40px; height: 40px; flex: none; }
+.chip .ic svg { width: 40px; height: 40px; }
+.jacket {
+  z-index: 12; width: 214px; height: 246px; border-radius: 20px; box-sizing: border-box;
+  background: linear-gradient(160deg, rgba(0, 60, 72, 0.78), rgba(4, 18, 24, 0.86)); border: 1.5px solid rgba(0, 224, 255, 0.35);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.30), inset 0 0 30px rgba(0, 224, 255, 0.10);
+}
+.jacket .tag { position: absolute; left: 12px; top: -15px; padding: 6px 10px; border-radius: 8px; background: var(--cyan); color: var(--on-cyan);
+  font: 800 15px/1 Inter, sans-serif; letter-spacing: 0.12em; white-space: nowrap; }
+.jacket svg { position: absolute; left: 7px; top: 22px; width: 200px; height: 222px; }
+.jacket .scan { position: absolute; left: 8px; right: 8px; height: 3px; top: 30px; border-radius: 2px;
+  background: linear-gradient(90deg, rgba(0, 224, 255, 0), rgba(127, 243, 255, 0.95), rgba(0, 224, 255, 0)); box-shadow: 0 0 14px rgba(0, 224, 255, 0.8); }
+
+/* ---------- follow ---------- */
+.follow {
+  z-index: 18; height: 112px; padding: 0 20px 0 18px; display: flex; align-items: center; gap: 18px; box-sizing: border-box;
+  background: var(--card); border: 1.5px solid var(--hair); border-radius: 24px; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+.follow .av { width: 70px; height: 70px; border-radius: 50%; background: #000; border: 2.5px solid var(--cyan); flex: none; display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 0 14px rgba(0, 224, 255, 0.35); }
+.follow .av svg { width: 50px; height: 50px; }
+.follow .names { display: flex; flex-direction: column; gap: 7px; margin-right: 6px; }
+.follow .names b { font: 800 31px/1 Inter, sans-serif; color: #fff; letter-spacing: -0.01em; }
+.follow .names i { font: 500 22px/1 Inter, sans-serif; font-style: normal; color: var(--ink2); }
+.follow .btn { position: relative; height: 56px; width: 186px; flex: none; }
+.follow .btn span { position: absolute; inset: 0; border-radius: 14px; display: flex; align-items: center; justify-content: center; gap: 8px;
+  font: 800 26px/1 Inter, sans-serif; white-space: nowrap; }
+.follow .btn .f1 { background: var(--cyan); color: var(--on-cyan); box-shadow: 0 0 16px rgba(0, 224, 255, 0.45); }
+.follow .btn .f2 { background: #2A2D33; color: #fff; opacity: 0; }
+.follow .btn .f2 svg { width: 24px; height: 24px; }
+.follow .tap { position: absolute; width: 120px; height: 120px; margin: -60px 0 0 -60px; border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.25) 70%, rgba(255, 255, 255, 0)); opacity: 0; }
+
+/* ---------- url ---------- */
+.url { z-index: 12; display: flex; flex-direction: column; align-items: center; gap: 12px; width: 1080px; }
+.url .pill { height: 70px; padding: 0 30px 0 24px; border-radius: 999px; display: flex; align-items: center; gap: 12px; box-sizing: border-box;
+  background: rgba(4, 20, 26, 0.88); border: 2.5px solid var(--cyan); color: var(--cyan);
+  box-shadow: 0 0 24px rgba(0, 224, 255, 0.45), inset 0 0 14px rgba(0, 224, 255, 0.14);
+  font: 700 36px/1 Inter, sans-serif; white-space: nowrap; }
+.url .pill svg { width: 28px; height: 28px; flex: none; }
+.url .pill .caret { display: inline-block; width: 3px; height: 34px; background: var(--cyan); margin-left: 2px; }
+.url .apply { padding: 9px 20px 10px; border-radius: 999px; background: rgba(10, 11, 14, 0.62);
+  font: 700 28px/1 Inter, sans-serif; color: #fff; white-space: nowrap; }
+.url .apply em { font-style: normal; color: var(--cyan); }
+
+/* ---------- polaroids ---------- */
+.pol { z-index: 14; width: 232px; padding: 12px 12px 44px; box-sizing: border-box; background: #F7F6F2; border-radius: 6px;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.38), 0 1px 0 rgba(0, 0, 0, 0.1); transform-origin: 50% 60%; }
+.pol img { display: block; width: 208px; height: 260px; object-fit: cover; border-radius: 2px; }
+
+/* ---------- small fx ---------- */
+.heart { z-index: 25; width: 96px; height: 96px; margin: -48px 0 0 -48px; }
+.heart svg { width: 96px; height: 96px; filter: drop-shadow(0 0 14px rgba(0, 224, 255, 0.85)); }
+.ring { z-index: 25; width: 190px; height: 190px; margin: -95px 0 0 -95px; border-radius: 50%; box-sizing: border-box;
+  border: 11px solid var(--cyan); box-shadow: 0 0 26px rgba(0, 224, 255, 0.9), inset 0 0 22px rgba(0, 224, 255, 0.6); opacity: 0; }
+.ring.two { border-width: 5px; opacity: 0; }
+#frost { position: absolute; left: 0; top: 0; z-index: 30; }
+#crack { position: absolute; left: 0; top: 0; z-index: 31; }
+.flash { z-index: 32; width: 520px; height: 520px; margin: -260px 0 0 -260px; border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(255, 255, 255, 0.95), rgba(200, 248, 255, 0.45) 35%, rgba(200, 248, 255, 0) 70%); opacity: 0; }
+
+/* ---------- captions ---------- */
+.cap {
+  z-index: 40; padding: 10px 26px 13px; border-radius: 20px; white-space: nowrap;
+  background: rgba(12, 13, 16, 0.74); border: 1.5px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.22);
+  font: 700 44px/1.15 Inter, sans-serif; letter-spacing: -0.005em; color: #fff; opacity: 0;
+}
+.cap .w { display: inline-block; }
+
+/* ---------- end card ---------- */
+.end { z-index: 50; width: 1080px; display: flex; flex-direction: column; align-items: center; gap: 30px; }
+.end .lockup { display: flex; align-items: center; gap: 26px; color: #fff; font: 700 84px/1 Unbounded, sans-serif; letter-spacing: 0.01em;
+  text-shadow: 0 6px 30px rgba(0, 0, 0, 0.35); }
+.end .lockup svg { width: 168px; height: 168px; margin: -30px -34px -30px -40px; filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.45)); }
+.end .eurl { font: 700 48px/1 Inter, sans-serif; color: var(--cyan); text-shadow: 0 0 22px rgba(0, 224, 255, 0.55), 0 4px 18px rgba(0, 0, 0, 0.4); }
